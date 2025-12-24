@@ -17,7 +17,7 @@ export const ModuleCard: React.FC<ModuleCardProps> = ({
   return (
     <button
       onClick={onClick}
-      className={`w-full text-right p-5 rounded-2xl transition-all border-2 cursor-pointer ${
+      className={`w-full text-right p-2 rounded-2xl transition-all border-2 cursor-pointer ${
         isActive
           ? "bg-blue-600 border-blue-700 shadow-lg translate-x-1"
           : "bg-white border-slate-100 hover:border-blue-200 shadow-sm"

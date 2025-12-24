@@ -21,7 +21,7 @@ export const ChapterSidebar: React.FC<ChapterSidebarProps> = ({
 
   // Extract moduleId from pathname: /chapter/[id]/[moduleId]
   const pathParts = pathname?.split("/") || [];
-  const currentModuleId = pathParts[3] as ModuleId || chapter.modules[0]?.id;
+  const currentModuleId = (pathParts[3] as ModuleId) || chapter.modules[0]?.id;
 
   useEffect(() => {
     const saved = localStorage.getItem(`completed_${chapterId}`);
@@ -92,7 +92,7 @@ export const ChapterSidebar: React.FC<ChapterSidebarProps> = ({
             <img
               src={`https://api.iconify.design/fluent-emoji/${chapter.icon}.svg`}
               alt={chapter.icon}
-              className="w-12 h-12 md:w-16 md:h-16"
+              className="w-8 h-8 md:w-10 md:h-10"
             />
           </div>
           <h2 className="text-2xl md:text-3xl font-black text-slate-900">
@@ -112,7 +112,7 @@ export const ChapterSidebar: React.FC<ChapterSidebarProps> = ({
               <Link
                 key={m.id}
                 href={`/chapter/${chapterId}/${m.id}`}
-                className="block mb-4 md:mb-6"
+                className="block mb-4 md:mb-4"
                 onClick={() => setSidebarOpen(false)}
               >
                 <ModuleCard
