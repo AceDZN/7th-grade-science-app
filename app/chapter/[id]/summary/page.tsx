@@ -1,11 +1,24 @@
 import React from 'react';
 import { ChapterId, ModuleId, Question } from '@/lib/types';
 import SummaryClient from './SummaryClient';
+import type { Metadata } from 'next';
+import { SITE_NAME, CHAPTERS } from '@/lib/constants';
 
 interface PageProps {
   params: Promise<{
     id: string;
   }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { id } = await params;
+  const chapter = CHAPTERS.find((c) => c.id === id);
+  const chapterName = chapter?.title || "";
+
+  return {
+    title: `${SITE_NAME} - ${chapterName} - מבחן מסכם`,
+    description: `בחן את הידע שלך ב${chapterName}. מבחן מסכם הכולל שאלות על כל נושאי הפרק.`,
+  };
 }
 
 export default async function Page({ params }: PageProps) {

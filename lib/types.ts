@@ -116,5 +116,9 @@ export type ContentBlock = TextBlock | HeroBlock | GridCardsBlock | QuizBlock | 
 export interface DynamicModuleData {
   id: string;
   title: string;
+  metadata?: {
+    description: string;
+    keywords?: string[];
+  };
   blocks: ContentBlock[];
 }

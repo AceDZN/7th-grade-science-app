@@ -1,7 +1,24 @@
 import React from "react";
-import { CHAPTERS } from "@/lib/constants";
+import { CHAPTERS, SITE_NAME } from "@/lib/constants";
 import { HeroSection } from "@/components/home/HeroSection";
 import { ChapterCard } from "@/components/home/ChapterCard";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: `${SITE_NAME} - לומדים מדעים בדרך חווייתית`,
+  description:
+    "פלטפורמה לימודית אינטראקטיבית למדעים. גלו את עולם החומר, המסה, הנפח והצפיפות דרך סימולציות, ניסויים ומבחנים חכמים.",
+  keywords: [
+    "מדעים",
+    "פיזיקה",
+    "מודל החלקיקים",
+    "מסה",
+    "נפח",
+    "צפיפות",
+    "למידה מקוונת",
+    "סימולציות"
+  ]
+};
 
 export default function Home() {
   return (

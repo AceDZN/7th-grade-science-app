@@ -1,11 +1,27 @@
 import React from "react";
-import { CHAPTERS } from "@/lib/constants";
+import { CHAPTERS, SITE_NAME } from "@/lib/constants";
 import { ChapterSidebar } from "@/components/chapter/ChapterSidebar";
 import { ChapterId } from "@/lib/types";
+import type { Metadata } from "next";
 
 interface ChapterLayoutProps {
   children: React.ReactNode;
   params: Promise<{ id: string }>;
+}
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const chapter = CHAPTERS.find((c) => c.id === id);
+  const chapterName = chapter?.title || "";
+
+  return {
+    title: `${SITE_NAME} - ${chapterName}`,
+    description: chapter?.description || SITE_NAME
+  };
 }
 
 export default async function ChapterLayout({

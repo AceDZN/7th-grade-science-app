@@ -4,6 +4,7 @@ import { ChapterId, ModuleId, DynamicModuleData, Question } from "@/lib/types";
 // Client component for interactive module content
 import ModuleClient from "./module-client";
 import type { Metadata, ResolvingMetadata } from "next";
+import { SITE_NAME, CHAPTERS } from "@/lib/constants";
 
 interface PageProps {
   params: Promise<{
@@ -38,9 +39,20 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { id, moduleId } = await params;
   const dynamicData = await getModuleData(id, moduleId);
+
+  const chapter = CHAPTERS.find((c) => c.id === id);
+  const chapterName = chapter?.title || "";
+  const moduleName = dynamicData?.title || "";
+
   return {
-    title: dynamicData?.title || "משפט מספר 1",
-    description: dynamicData?.title || "משפט מספר 1"
+    title: `${SITE_NAME} - ${chapterName} - ${moduleName}`,
+    description:
+      dynamicData?.metadata?.description || chapter?.description || SITE_NAME,
+    keywords: dynamicData?.metadata?.keywords || [
+      chapterName,
+      moduleName,
+      SITE_NAME
+    ]
   };
 }
 
