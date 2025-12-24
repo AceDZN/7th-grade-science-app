@@ -1,0 +1,138 @@
+{
+  "id": "compression",
+  "title": "דחיסה בחומר",
+  "blocks": [
+    {
+      "type": "hero",
+      "title": "דחיסה: למה זה אפשרי?",
+      "subtitle": "מדוע גז נדחס בקלות, נוזל כמעט ולא, ומוצק בכלל לא?"
+    },
+    {
+      "type": "text",
+      "content": "<div class=\"bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-3xl border border-orange-100 shadow-sm mb-8\"><h3 class=\"text-2xl font-black text-orange-900 mb-4 text-center\"><img src=\"https://api.iconify.design/fluent-emoji/microscope.svg\" alt=\"microscope\" class=\"w-8 h-8 inline\" /> מהי דחיסה?</h3><p class=\"text-lg text-slate-700 text-center\"><strong>דחיסה</strong> היא הקטנת הנפח של חומר על ידי הפעלת לחץ עליו. כשאנו דוחסים חומר, אנו מקטינים את המרווחים (הריק) שבין החלקיקים שלו.</p></div>"
+    },
+    {
+      "type": "text",
+      "content": "<div class=\"grid md:grid-cols-3 gap-6 my-8\"><div class=\"bg-gradient-to-br from-purple-500 to-indigo-600 p-6 rounded-3xl text-white shadow-xl\"><div class=\"text-center\"><img src=\"https://api.iconify.design/fluent-emoji/dashing-away.svg\" alt=\"gas\" class=\"w-16 h-16 mx-auto mb-4\" /><h4 class=\"text-xl font-black mb-3\">דחיסת גז</h4><p class=\"text-sm opacity-90 mb-3\">גז נדחס בקלות רבה!</p><div class=\"bg-white/20 p-3 rounded-xl text-sm\"><strong>הסיבה:</strong> המרווחים בין חלקיקי הגז הם עצומים. כשמפעילים לחץ, פשוט מקרבים את החלקיקים זה לזה.</div></div></div><div class=\"bg-gradient-to-br from-blue-500 to-cyan-600 p-6 rounded-3xl text-white shadow-xl\"><div class=\"text-center\"><img src=\"https://api.iconify.design/fluent-emoji/droplet.svg\" alt=\"droplet\" class=\"w-16 h-16 mx-auto mb-4\" /><h4 class=\"text-xl font-black mb-3\">דחיסת נוזל</h4><p class=\"text-sm opacity-90 mb-3\">נוזל כמעט ואינו נדחס!</p><div class=\"bg-white/20 p-3 rounded-xl text-sm\"><strong>הסיבה:</strong> המרווחים בין חלקיקי הנוזל קטנים מאוד. כמעט אין \"מקום\" לקרב אותם עוד יותר.</div></div></div><div class=\"bg-gradient-to-br from-slate-600 to-gray-700 p-6 rounded-3xl text-white shadow-xl\"><div class=\"text-center\"><img src=\"https://api.iconify.design/fluent-emoji/ice.svg\" alt=\"ice\" class=\"w-16 h-16 mx-auto mb-4\" /><h4 class=\"text-xl font-black mb-3\">דחיסת מוצק</h4><p class=\"text-sm opacity-90 mb-3\">מוצק אינו נדחס (אלא בלחץ עצום)!</p><div class=\"bg-white/20 p-3 rounded-xl text-sm\"><strong>הסיבה:</strong> החלקיקים כבר צמודים זה לזה במבנה קבוע. אין מרווחים שאפשר להקטין.</div></div></div></div>"
+    },
+    {
+      "type": "simulation",
+      "componentName": "CompressionSimulation"
+    },
+    {
+      "type": "scientific_table",
+      "title": "השוואת יכולת הדחיסה במצבי צבירה שונים",
+      "headers": [
+        "מצב צבירה",
+        "גודל המרווחים",
+        "יכולת דחיסה",
+        "דוגמה מחיי היומיום"
+      ],
+      "rows": [
+        [
+          "גז",
+          "גדולים מאוד",
+          "נדחס בקלות",
+          "משאבת אופניים - דוחסים אוויר בקלות"
+        ],
+        ["נוזל", "קטנים", "כמעט לא נדחס", "מזרק מלא מים - לא ניתן לדחוס"],
+        ["מוצק", "קטנים מאוד", "לא נדחס", "קוביית עץ - לא משתנה בלחץ יד"]
+      ],
+      "variant": "emerald",
+      "note": "ככל שהמרווחים בין החלקיקים גדולים יותר, כך יכולת הדחיסה גדולה יותר!"
+    },
+    {
+      "type": "text",
+      "content": "<div class=\"bg-gradient-to-r from-amber-100 to-orange-100 p-6 rounded-3xl border-2 border-amber-300 my-8\"><h4 class=\"text-xl font-black text-amber-900 mb-4\"><img src=\"https://api.iconify.design/fluent-emoji/test-tube.svg\" alt=\"test-tube\" class=\"w-8 h-8 inline\" /> ניסוי חשיבה: המזרק הסגור</h4><div class=\"grid md:grid-cols-2 gap-6\"><div class=\"bg-white p-4 rounded-2xl shadow-sm\"><h5 class=\"font-bold text-slate-800 mb-2\">מזרק עם אוויר</h5><p class=\"text-slate-600\">כשסוגרים את קצה המזרק ולוחצים על הבוכנה, האוויר נדחס בקלות. המרווחים העצומים בין חלקיקי הגז מתכווצים.</p></div><div class=\"bg-white p-4 rounded-2xl shadow-sm\"><h5 class=\"font-bold text-slate-800 mb-2\">מזרק עם מים</h5><p class=\"text-slate-600\">כשמנסים לעשות את אותו הדבר עם מים, הבוכנה כמעט לא זזה! אין מספיק מרווחים בין חלקיקי המים.</p></div></div></div>"
+    },
+    {
+      "type": "enrichment",
+      "title": "דחיסת נוזלים בעולם האמיתי",
+      "icon": "automobile",
+      "content": "<p>למרות שנוזלים כמעט אינם נדחסים, תכונה זו דווקא מאוד שימושית!</p><p class=\"mt-3\"><strong>מערכות הידראוליות:</strong> מערכות הבלמים ברכב עובדות על עיקרון זה. כשלוחצים על דוושת הבלם, שמן (נוזל) מעביר את הלחץ לגלגלים. מכיוון שהנוזל לא נדחס, הלחץ מועבר במלואו ובמהירות!</p><p class=\"mt-3 p-3 bg-blue-100 rounded-xl text-blue-900\"><img src=\"https://api.iconify.design/fluent-emoji/light-bulb.svg\" alt=\"lightbulb\" class=\"w-5 h-5 inline\" /> לו השמן היה נדחס כמו גז, הבלמים לא היו עובדים ביעילות!</p>"
+    },
+    {
+      "type": "quiz",
+      "questions": [
+        {
+          "id": "c1_comp_1",
+          "question": "מדוע ניתן לדחוס גז בקלות אך נוזל כמעט ולא?",
+          "options": [
+            "כי חלקיקי הגז קטנים יותר",
+            "כי בנפח של גז יש הרבה ריק (רווחים גדולים)",
+            "כי חלקיקי הנוזל דוחים זה את זה",
+            "כי חלקיקי הגז קלים יותר"
+          ],
+          "correctAnswer": 1,
+          "explanation": "בגז המרווחים (הריק) בין החלקיקים גדולים מאוד, ולכן ניתן לקרב את החלקיקים זה לזה. בנוזל המרווחים קטנים ואין לאן לדחוס.",
+          "category": "compression"
+        },
+        {
+          "id": "c1_comp_2",
+          "question": "מדוע מוצק אינו ניתן לדחיסה?",
+          "options": [
+            "כי החלקיקים שלו כבדים מדי",
+            "כי החלקיקים כבר צמודים זה לזה ואין מרווחים להקטין",
+            "כי יש לו צורה קבועה",
+            "כי הוא קשה מדי"
+          ],
+          "correctAnswer": 1,
+          "explanation": "במוצק, החלקיקים כבר נמצאים במרחק הקטן ביותר האפשרי זה מזה. אין כמעט מרווחים (ריק) שאפשר להקטין.",
+          "category": "compression"
+        },
+        {
+          "id": "q13_d",
+          "question": "מכיוון שיש מרווחים גדולים בין חלקיקי הגז, הרי שניתן:",
+          "options": [
+            "לחמם אותו בקלות",
+            "לדחוס אותו בקלות",
+            "לשנות את צבעו",
+            "להפוך אותו למוצק מיד"
+          ],
+          "correctAnswer": 1,
+          "explanation": "המרווחים הגדולים בין חלקיקי הגז מאפשרים לקרב אותם זה לזה - כלומר לדחוס את הגז.",
+          "category": "compression"
+        },
+        {
+          "id": "c1_comp_3",
+          "question": "מה קורה לחלקיקים בגז כאשר דוחסים אותו?",
+          "options": [
+            "החלקיקים מתכווצים ונעשים קטנים יותר",
+            "החלקיקים מתקרבים זה לזה והמרווחים קטנים",
+            "החלקיקים נעלמים",
+            "החלקיקים מתאחדים לחלקיק אחד גדול"
+          ],
+          "correctAnswer": 1,
+          "explanation": "כשדוחסים גז, החלקיקים עצמם לא משתנים! הם רק מתקרבים זה לזה, כלומר המרווחים (הריק) ביניהם קטנים.",
+          "category": "compression"
+        },
+        {
+          "id": "q11",
+          "question": "כאשר שואבים אוויר מקופסת פח, דפנות הקופסה מתעוותים והקופסה נמעכת. מה ההסבר?",
+          "options": [
+            "דפנות הקופסה נעשות גמישות מהשאיבה",
+            "לחץ האוויר מחוץ לקופסה גדול מלחץ האוויר שבתוכה",
+            "הריק שבקופסה מושך את הדפנות פנימה",
+            "טמפרטורת האוויר בקופסה יורדת"
+          ],
+          "correctAnswer": 1,
+          "explanation": "כשמוציאים אוויר מהקופסה, יש פחות חלקיקים בפנים שמפעילים לחץ על הדפנות. הלחץ החיצוני (של האוויר מבחוץ) חזק יותר ומועך את הקופסה.",
+          "category": "compression"
+        },
+        {
+          "id": "c1_comp_4",
+          "question": "למה משאבת אופניים עובדת?",
+          "options": [
+            "כי היא מחממת את האוויר",
+            "כי האוויר (גז) נדחס בקלות והמרווחים בין החלקיקים קטנים",
+            "כי המשאבה עשויה ממתכת",
+            "כי הצמיג עשוי מגומי"
+          ],
+          "correctAnswer": 1,
+          "explanation": "המשאבה לוחצת על האוויר ודוחסת אותו. מכיוון שהמרווחים בין חלקיקי הגז גדולים, קל לדחוס אותו ולהכניס יותר אוויר לצמיג.",
+          "category": "compression"
+        }
+      ]
+    }
+  ]
+}

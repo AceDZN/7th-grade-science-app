@@ -1,0 +1,117 @@
+{
+  "id": "summary",
+  "title": "מבחן פרק 2",
+  "blocks": [
+    {
+      "type": "hero",
+      "title": "סיכום ומבחן פרק 2",
+      "subtitle": "גוף וחומר, נפח, מסה, משקל וצפיפות"
+    },
+    {
+      "type": "text",
+      "content": "<div class=\"bg-gradient-to-br from-violet-50 to-purple-50 p-8 rounded-3xl border border-violet-100 shadow-sm mb-8\"><h3 class=\"text-2xl font-black text-violet-900 mb-6 text-center\">סיכום הנושאים המרכזיים</h3><div class=\"grid md:grid-cols-2 gap-4\"><div class=\"bg-white p-4 rounded-xl shadow-sm border-r-4 border-blue-500\"><h4 class=\"font-bold text-blue-700 mb-2\">גוף וחומר</h4><p class=\"text-sm text-slate-600\"><strong>גוף:</strong> דבר בעל צורה, נפח ומסה<br/><strong>חומר:</strong> ממה הגוף עשוי</p></div><div class=\"bg-white p-4 rounded-xl shadow-sm border-r-4 border-emerald-500\"><h4 class=\"font-bold text-emerald-700 mb-2\">נפח</h4><p class=\"text-sm text-slate-600\">המקום שגוף תופס במרחב<br/>יחידות: סמ\"ק, מ\"ל, ליטר</p></div><div class=\"bg-white p-4 rounded-xl shadow-sm border-r-4 border-amber-500\"><h4 class=\"font-bold text-amber-700 mb-2\">מסה ומשקל</h4><p class=\"text-sm text-slate-600\"><strong>מסה:</strong> כמות חומר (קבועה)<br/><strong>משקל:</strong> כוח כבידה (משתנה)</p></div><div class=\"bg-white p-4 rounded-xl shadow-sm border-r-4 border-pink-500\"><h4 class=\"font-bold text-pink-700 mb-2\">צפיפות</h4><p class=\"text-sm text-slate-600\">מסה ÷ נפח<br/>קובעת ציפה/שקיעה</p></div></div></div>"
+    },
+    {
+      "type": "scientific_table",
+      "title": "נוסחאות וכללים חשובים",
+      "headers": ["נושא", "נוסחה / כלל", "יחידות"],
+      "rows": [
+        ["נפח תיבה", "אורך × רוחב × גובה", "סמ\"ק, מ\"ל, ליטר"],
+        ["צפיפות", "מסה ÷ נפח", "גרם/סמ\"ק"],
+        ["משקל (בקירוב)", "מסה × 10", "ניוטון"],
+        ["ציפה", "צפיפות גוף < צפיפות נוזל", "יצוף"],
+        ["שקיעה", "צפיפות גוף > צפיפות נוזל", "ישקע"]
+      ],
+      "variant": "emerald"
+    },
+    {
+      "type": "text",
+      "content": "<div class=\"bg-gradient-to-r from-amber-100 to-orange-100 p-6 rounded-3xl border-2 border-amber-300 my-8\"><h4 class=\"text-xl font-black text-amber-900 mb-4\">טיפים להמרות</h4><div class=\"grid md:grid-cols-2 gap-4\"><div class=\"bg-white p-4 rounded-xl shadow-sm\"><h5 class=\"font-bold text-slate-800 mb-2\">נפח</h5><p class=\"text-sm text-slate-600\">1 סמ\"ק = 1 מ\"ל<br/>1 ליטר = 1,000 מ\"ל<br/>1 מ\"ק = 1,000 ליטר</p></div><div class=\"bg-white p-4 rounded-xl shadow-sm\"><h5 class=\"font-bold text-slate-800 mb-2\">מסה</h5><p class=\"text-sm text-slate-600\">1,000 מ\"ג = 1 גרם<br/>1,000 גרם = 1 ק\"ג<br/>1,000 ק\"ג = 1 טונה</p></div></div></div>"
+    },
+    {
+      "type": "quiz",
+      "questions": [
+        {
+          "id": "sum_c2_1",
+          "question": "מה מהבאים הוא \"חומר\" ולא \"גוף\"?",
+          "options": ["כוס", "שולחן", "ברזל", "כדור"],
+          "correctAnswer": 2,
+          "explanation": "ברזל הוא שם של חומר. כוס, שולחן וכדור הם גופים - יש להם צורה מוגדרת.",
+          "category": "summary"
+        },
+        {
+          "id": "sum_c2_2",
+          "question": "גוף בעל מסה 500 גרם ונפח 250 סמ\"ק. מהי צפיפותו והאם יצוף במים?",
+          "options": ["2 גר'/סמ\"ק, ישקע", "0.5 גר'/סמ\"ק, יצוף", "2 גר'/סמ\"ק, יצוף", "0.5 גר'/סמ\"ק, ישקע"],
+          "correctAnswer": 0,
+          "explanation": "צפיפות = 500÷250 = 2 גר'/סמ\"ק. מכיוון ש-2 > 1 (צפיפות המים), הגוף ישקע.",
+          "category": "summary"
+        },
+        {
+          "id": "sum_c2_3",
+          "question": "אסטרונאוט במסה 70 ק\"ג נמצא בחלל. מהי מסתו ומשקלו?",
+          "options": ["מסה: 70 ק\"ג, משקל: 700N", "מסה: 0, משקל: 0", "מסה: 70 ק\"ג, משקל: 0", "מסה: 0, משקל: 700N"],
+          "correctAnswer": 2,
+          "explanation": "המסה קבועה תמיד (70 ק\"ג). בחלל אין כבידה, לכן המשקל (כוח) הוא אפס.",
+          "category": "summary"
+        },
+        {
+          "id": "sum_c2_4",
+          "question": "כמה מ\"ל יש ב-3.5 ליטר?",
+          "options": ["35 מ\"ל", "350 מ\"ל", "3,500 מ\"ל", "0.0035 מ\"ל"],
+          "correctAnswer": 2,
+          "explanation": "1 ליטר = 1,000 מ\"ל, לכן 3.5 × 1,000 = 3,500 מ\"ל.",
+          "category": "summary"
+        },
+        {
+          "id": "sum_c2_5",
+          "question": "איזה כלי מתאים למדידת נפח של אבן?",
+          "options": ["סרגל", "מאזני כפות", "משורה עם מים (דחיקת מים)", "מד כוח"],
+          "correctAnswer": 2,
+          "explanation": "אבן היא גוף לא הנדסי. משתמשים בשיטת דחיקת מים במשורה.",
+          "category": "summary"
+        },
+        {
+          "id": "sum_c2_6",
+          "question": "מדוע ספינת ברזל צפה אך מסמר ברזל שוקע?",
+          "options": ["הספינה עשויה מברזל קל יותר", "לספינה יש חללי אוויר שמקטינים את הצפיפות הממוצעת", "המסמר חלוד", "הים מלוח יותר מהבריכה"],
+          "correctAnswer": 1,
+          "explanation": "הספינה מכילה חללי אוויר גדולים. הצפיפות הממוצעת של הספינה (ברזל+אוויר) קטנה מ-1.",
+          "category": "summary"
+        },
+        {
+          "id": "sum_c2_7",
+          "question": "מה יקרה לנוזלים אם נשפוך לכוס: שמן (0.9), מים (1.0), דבש (1.4)?",
+          "options": ["יתערבבו לחלוטין", "שמן למעלה, מים באמצע, דבש למטה", "דבש למעלה, מים באמצע, שמן למטה", "יישארו מעורבבים זמנית"],
+          "correctAnswer": 1,
+          "explanation": "הנוזלים יסתדרו לפי צפיפותם: הקל (שמן) למעלה, הכבד (דבש) למטה.",
+          "category": "summary"
+        },
+        {
+          "id": "sum_c2_8",
+          "question": "במשורה יש 30 מ\"ל מים. הכנסנו גוף והמפלס עלה ל-45 מ\"ל. מהו נפח הגוף?",
+          "options": ["30 מ\"ל", "45 מ\"ל", "15 מ\"ל", "75 מ\"ל"],
+          "correctAnswer": 2,
+          "explanation": "נפח הגוף = נפח סופי - נפח התחלתי = 45 - 30 = 15 מ\"ל.",
+          "category": "summary"
+        },
+        {
+          "id": "sum_c2_9",
+          "question": "מהי יחידת המידה של משקל?",
+          "options": ["קילוגרם", "גרם", "ניוטון", "ליטר"],
+          "correctAnswer": 2,
+          "explanation": "משקל הוא כוח, ולכן נמדד בניוטון (N). מסה נמדדת בק\"ג או גרם.",
+          "category": "summary"
+        },
+        {
+          "id": "sum_c2_10",
+          "question": "לכל גוף יש:",
+          "options": ["רק מסה", "רק נפח", "מסה, נפח וצורה", "רק צורה"],
+          "correctAnswer": 2,
+          "explanation": "כל גוף מאופיין בשלושה דברים: צורה מוגדרת, נפח (תופס מקום), ומסה (כמות חומר).",
+          "category": "summary"
+        }
+      ]
+    }
+  ]
+}
