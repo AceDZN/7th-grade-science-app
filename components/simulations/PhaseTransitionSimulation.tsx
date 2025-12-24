@@ -6,6 +6,25 @@ export const PhaseTransitionSimulation: React.FC = () => {
   const [temperature, setTemperature] = useState(25);
   const [isAnimating, setIsAnimating] = useState(false);
 
+  // Generate stable particles for each state
+  const particles = React.useMemo(() => {
+    return {
+      solid: Array.from({ length: 16 }).map((_, i) => i),
+      liquid: Array.from({ length: 12 }).map((_, i) => ({
+        id: i,
+        left: 20 + Math.random() * 60,
+        top: 30 + Math.random() * 60,
+        duration: 1 + Math.random(),
+      })),
+      gas: Array.from({ length: 15 }).map((_, i) => ({
+        id: i,
+        left: 10 + Math.random() * 80,
+        top: 10 + Math.random() * 80,
+        duration: 1.5 + Math.random(),
+      })),
+    };
+  }, []);
+
   const getState = () => {
     if (temperature <= 0) return "solid";
     if (temperature >= 100) return "gas";
@@ -70,7 +89,7 @@ export const PhaseTransitionSimulation: React.FC = () => {
         {state === "solid" && (
           <div className="absolute bottom-0 w-full h-2/3 bg-gradient-to-t from-cyan-400 to-cyan-200 flex items-center justify-center">
             <div className="grid grid-cols-4 gap-1">
-              {Array.from({ length: 16 }).map((_, i) => (
+              {particles.solid.map((i) => (
                 <div
                   key={i}
                   className="w-3 h-3 bg-cyan-600 rounded-sm animate-pulse"
@@ -82,16 +101,14 @@ export const PhaseTransitionSimulation: React.FC = () => {
         {state === "liquid" && (
           <div className="absolute bottom-0 w-full h-2/3 bg-gradient-to-t from-blue-500 to-blue-300">
             <div className="absolute inset-0 flex items-center justify-center">
-              {Array.from({ length: 12 }).map((_, i) => (
+              {particles.liquid.map((p) => (
                 <div
-                  key={i}
+                  key={p.id}
                   className="absolute w-2 h-2 bg-blue-700 rounded-full"
                   style={{
-                    left: `${20 + Math.random() * 60}%`,
-                    top: `${30 + Math.random() * 60}%`,
-                    animation: `float ${
-                      1 + Math.random()
-                    }s ease-in-out infinite`
+                    left: `${p.left}%`,
+                    top: `${p.top}%`,
+                    animation: `float ${p.duration}s ease-in-out infinite`,
                   }}
                 ></div>
               ))}
@@ -100,16 +117,14 @@ export const PhaseTransitionSimulation: React.FC = () => {
         )}
         {state === "gas" && (
           <div className="absolute inset-0">
-            {Array.from({ length: 15 }).map((_, i) => (
+            {particles.gas.map((p) => (
               <div
-                key={i}
+                key={p.id}
                 className="absolute w-2 h-2 bg-purple-400 rounded-full opacity-60"
                 style={{
-                  left: `${10 + Math.random() * 80}%`,
-                  top: `${10 + Math.random() * 80}%`,
-                  animation: `bubble ${
-                    1.5 + Math.random()
-                  }s ease-in-out infinite`
+                  left: `${p.left}%`,
+                  top: `${p.top}%`,
+                  animation: `bubble ${p.duration}s ease-in-out infinite`,
                 }}
               ></div>
             ))}

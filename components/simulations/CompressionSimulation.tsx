@@ -8,6 +8,23 @@ export const CompressionSimulation: React.FC = () => {
     "gas"
   );
 
+  const [particles, setParticles] = useState<{ top: number; left: number }[]>(
+    []
+  );
+
+  // Generate stable particles when matter state changes to gas
+  React.useEffect(() => {
+    if (matterState === "gas") {
+      const newParticles = Array.from({ length: 20 }).map(() => ({
+        top: Math.random() * 80 + 10,
+        left: Math.random() * 90 + 5
+      }));
+      setParticles(newParticles);
+    } else {
+      setParticles([]);
+    }
+  }, [matterState]);
+
   const getVolume = () => {
     switch (matterState) {
       case "gas":
@@ -81,17 +98,23 @@ export const CompressionSimulation: React.FC = () => {
         </button>
       </div>
 
-      <div className="relative w-80 h-32 bg-slate-200 rounded-r-lg border-y-4 border-r-4 border-slate-400 flex items-center">
-        <div className="absolute left-0 w-full h-full bg-white opacity-40"></div>
+      <div className="relative w-80 h-32 bg-slate-200 rounded-r-lg border-y-4 border-r-4 border-slate-400 flex items-center justify-end overflow-visible">
+        <div className="absolute left-0 w-full h-full bg-white opacity-40 rounded-r-sm"></div>
+
+        {/* Piston */}
         <div
           className="absolute h-full bg-slate-500 w-4 transition-all duration-300 z-20"
-          style={{ left: `${volume}%` }}
+          style={{ right: `${volume}%` }}
         >
-          <div className="absolute top-1/2 -translate-y-1/2 -left-20 w-20 h-4 bg-slate-400"></div>
-          <div className="absolute top-1/2 -translate-y-1/2 -left-24 w-4 h-16 bg-slate-600 rounded-l-lg"></div>
+          {/* Rod */}
+          <div className="absolute top-1/2 -translate-y-1/2 right-4 w-20 h-4 bg-slate-400"></div>
+          {/* Handle */}
+          <div className="absolute top-1/2 -translate-y-1/2 right-24 w-4 h-16 bg-slate-600 rounded-l-lg"></div>
         </div>
+
+        {/* Matter Content */}
         <div
-          className={`h-full transition-all duration-300 ${
+          className={`h-full transition-all duration-300 absolute right-0 top-0 rounded-r-sm ${
             matterState === "gas"
               ? "bg-purple-100"
               : matterState === "liquid"
@@ -101,18 +124,17 @@ export const CompressionSimulation: React.FC = () => {
           style={{ width: `${volume}%` }}
         >
           {matterState === "gas" &&
-            Array.from({ length: Math.floor(15 * (volume / 100)) }).map(
-              (_, i) => (
-                <div
-                  key={i}
-                  className="absolute w-2 h-2 bg-purple-500 rounded-full animate-pulse"
-                  style={{
-                    top: `${Math.random() * 80 + 10}%`,
-                    left: `${Math.random() * (volume - 10) + 5}%`
-                  }}
-                ></div>
-              )
-            )}
+            particles.map((p, i) => (
+              <div
+                key={i}
+                className="absolute w-2 h-2 bg-purple-500 rounded-full"
+                style={{
+                  top: `${p.top}%`,
+                  left: `${p.left}%`,
+                  transition: "left 0.3s ease-out, top 0.3s ease-out"
+                }}
+              ></div>
+            ))}
           {matterState === "liquid" && (
             <div className="absolute inset-0 flex items-center justify-center">
               <span className="text-white text-xs font-bold opacity-60">
@@ -205,4 +227,3 @@ export const CompressionSimulation: React.FC = () => {
     </div>
   );
 };
-
