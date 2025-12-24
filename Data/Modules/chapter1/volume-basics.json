@@ -58,77 +58,7 @@
       "content": "<div class=\"bg-gradient-to-r from-red-100 to-pink-100 p-6 rounded-3xl border-2 border-red-300 my-8\"><h4 class=\"text-xl font-black text-red-900 mb-4\"><img src=\"https://api.iconify.design/fluent-emoji/warning.svg\" alt=\"warning\" class=\"w-8 h-8 inline\" /> טעויות נפוצות במדידת נפח</h4><div class=\"grid md:grid-cols-2 gap-4\"><div class=\"bg-white p-4 rounded-xl shadow-sm\"><img src=\"https://api.iconify.design/fluent-emoji/cross-mark.svg\" alt=\"cross\" class=\"w-6 h-6\" /><p class=\"text-red-700 font-bold\">הסתכלות מלמעלה או מלמטה</p><p class=\"text-sm text-slate-600\">גורמת לקריאה שגויה בגלל זווית הראייה</p></div><div class=\"bg-white p-4 rounded-xl shadow-sm\"><img src=\"https://api.iconify.design/fluent-emoji/cross-mark.svg\" alt=\"cross\" class=\"w-6 h-6\" /><p class=\"text-red-700 font-bold\">קריאה מראש המניסקוס</p><p class=\"text-sm text-slate-600\">תמיד לקרוא מתחתית הקעור!</p></div><div class=\"bg-white p-4 rounded-xl shadow-sm\"><img src=\"https://api.iconify.design/fluent-emoji/cross-mark.svg\" alt=\"cross\" class=\"w-6 h-6\" /><p class=\"text-red-700 font-bold\">שימוש בסרגל למוצק לא הנדסי</p><p class=\"text-sm text-slate-600\">לא ניתן לחשב נפח של צורה מורכבת בסרגל</p></div><div class=\"bg-white p-4 rounded-xl shadow-sm\"><img src=\"https://api.iconify.design/fluent-emoji/cross-mark.svg\" alt=\"cross\" class=\"w-6 h-6\" /><p class=\"text-red-700 font-bold\">בלבול בין יחידות</p><p class=\"text-sm text-slate-600\">לוודא שכל המדידות באותן יחידות!</p></div></div></div>"
     },
     {
-      "type": "quiz",
-      "questions": [
-        {
-          "id": "c1_m3_1",
-          "question": "כיצד מומלץ למדוד נפח של נוזל?",
-          "options": [
-            "בעזרת סרגל",
-            "בעזרת משורה",
-            "בעזרת מאזניים",
-            "בעזרת טרמומטר"
-          ],
-          "correctAnswer": 1,
-          "explanation": "נוזל נמדד במשורה (או כלי מדידה אחר כמו פיפטה או מזרק). יש להסתכל בתחתית המניסקוס בגובה העיניים.",
-          "category": "volume-basics"
-        },
-        {
-          "id": "c1_m3_2",
-          "question": "כיצד מודדים נפח של אבן (מוצק לא הנדסי)?",
-          "options": [
-            "מודדים אורך × רוחב × גובה",
-            "שוקלים אותה",
-            "בשיטת דחיקת מים - מכניסים למשורה ובודקים כמה המים עלו",
-            "בעזרת טרמומטר"
-          ],
-          "correctAnswer": 2,
-          "explanation": "מוצק לא הנדסי אי אפשר לחשב בנוסחה. משתמשים בשיטת דחיקת מים: ההפרש במפלס המים = נפח הגוף.",
-          "category": "volume-basics"
-        },
-        {
-          "id": "c1_m3_3",
-          "question": "מהו נפח הגז בבלון?",
-          "options": [
-            "תמיד 1 ליטר",
-            "שווה לנפח הבלון",
-            "תלוי בצבע הבלון",
-            "אי אפשר למדוד"
-          ],
-          "correctAnswer": 1,
-          "explanation": "גז ממלא את כל נפח הכלי בו הוא נמצא. לכן נפח הגז שווה לנפח הכלי (במקרה זה - הבלון).",
-          "category": "volume-basics"
-        },
-        {
-          "id": "c1_m3_4",
-          "question": "כמה מ\"ל יש בסנטימטר מעוקב אחד (1 סמ\"ק)?",
-          "options": ["0.1 מ\"ל", "1 מ\"ל", "10 מ\"ל", "100 מ\"ל"],
-          "correctAnswer": 1,
-          "explanation": "1 סמ\"ק = 1 מ\"ל בדיוק! אלה שתי דרכים לתאר את אותו הנפח.",
-          "category": "volume-basics"
-        },
-        {
-          "id": "q18",
-          "question": "שתי קבוצות בנו משורה מכוס. קבוצה א סימנה לפי סרגל (כל 1 ס\"מ), קבוצה ב הוסיפה כל פעם 10 מ\"ל וסימנה. מי בנה כלי למדידת נפח?",
-          "options": ["קבוצה א", "קבוצה ב", "שתיהן", "אף אחת"],
-          "correctAnswer": 1,
-          "explanation": "נפח תלוי בצורת הכלי, לא בגובה! רק קבוצה ב' סימנה לפי נפח אמיתי. קבוצה א' הניחה שהכוס גלילית מושלמת, מה שלא בהכרח נכון.",
-          "category": "volume-basics"
-        },
-        {
-          "id": "c1_m3_5",
-          "question": "היכן יש להסתכל כשקוראים נפח במשורה?",
-          "options": [
-            "בראש המניסקוס (החלק הגבוה)",
-            "בתחתית המניסקוס (החלק הנמוך)",
-            "באמצע המשורה",
-            "לא משנה"
-          ],
-          "correctAnswer": 1,
-          "explanation": "תמיד יש לקרוא את הנפח בתחתית המניסקוס (החלק הנמוך ביותר של פני הנוזל), בגובה העיניים.",
-          "category": "volume-basics"
-        }
-      ]
+      "type": "quiz"
     }
   ]
 }

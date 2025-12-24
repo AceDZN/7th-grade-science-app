@@ -1,6 +1,6 @@
 import fs from "fs/promises";
 import path from "path";
-import { ChapterId, ModuleId, DynamicModuleData } from "@/lib/types";
+import { ChapterId, ModuleId, DynamicModuleData, Question } from "@/lib/types";
 // Client component for interactive module content
 import ModuleClient from "./module-client";
 import type { Metadata, ResolvingMetadata } from "next";
@@ -51,12 +51,27 @@ export default async function Page({ params }: PageProps) {
 
   const dynamicData = await getModuleData(chapterId, moduleId);
 
+  // Dynamically load questions for the specific chapter on the server
+  let questions: Question[] = [];
+  try {
+    if (chapterId === ChapterId.Chapter1) {
+      const { CHAPTER1_QUESTIONS } = await import("@/lib/constants/chapter_1");
+      questions = CHAPTER1_QUESTIONS[moduleId] || [];
+    } else if (chapterId === ChapterId.Chapter2) {
+      const { CHAPTER2_QUESTIONS } = await import("@/lib/constants/chapter_2");
+      questions = CHAPTER2_QUESTIONS[moduleId] || [];
+    }
+  } catch (error) {
+    console.error("Error loading questions:", error);
+  }
+
   return (
     <div className="animate-in fade-in duration-700">
       <ModuleClient
         chapterId={chapterId}
         moduleId={moduleId}
         dynamicData={dynamicData}
+        questions={questions}
       />
     </div>
   );

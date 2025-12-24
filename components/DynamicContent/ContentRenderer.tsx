@@ -22,7 +22,7 @@ export const ContentRenderer = ({ blocks, onQuizComplete }: { blocks: ContentBlo
           case 'quiz':
             return (
                 <div key={idx} className="bg-slate-50 p-4 md:p-6 lg:p-8 rounded-xl md:rounded-2xl lg:rounded-3xl border border-slate-200">
-                    <Quiz questions={block.questions} onComplete={onQuizComplete || (() => {})} />
+                    <Quiz questions={block.questions || []} onComplete={onQuizComplete || (() => {})} />
                 </div>
             );
           case 'enrichment':

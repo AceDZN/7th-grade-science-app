@@ -87,7 +87,7 @@ export interface GridCardsBlock extends BaseContentBlock {
 
 export interface QuizBlock extends BaseContentBlock {
   type: 'quiz';
-  questions: Question[];
+  questions?: Question[];
 }
 
 export interface SimulationBlock extends BaseContentBlock {
