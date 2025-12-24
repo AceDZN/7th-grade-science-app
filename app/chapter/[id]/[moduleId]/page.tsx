@@ -40,7 +40,7 @@ export async function generateMetadata(
   const dynamicData = await getModuleData(id, moduleId);
   return {
     title: dynamicData?.title || "משפט מספר 1",
-    description: dynamicData?.description || "משפט מספר 1"
+    description: dynamicData?.title || "משפט מספר 1"
   };
 }
 
