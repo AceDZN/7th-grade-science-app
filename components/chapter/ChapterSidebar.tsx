@@ -70,6 +70,7 @@ export const ChapterSidebar: React.FC<ChapterSidebarProps> = ({
         bg-white border-l border-slate-200
         h-screen overflow-y-auto
         p-4 md:p-6 lg:p-8
+        pb-1 md:pb-1 lg:pb-4
         shadow-sm
         transition-transform duration-300
         z-40
