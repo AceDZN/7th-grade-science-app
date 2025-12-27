@@ -24,8 +24,28 @@
       ]
     },
     {
-      "type": "text",
-      "content": "<div class=\"grid md:grid-cols-3 gap-6 my-8\"><div class=\"bg-gradient-to-br from-purple-500 to-indigo-600 p-6 rounded-3xl text-white shadow-xl\"><div class=\"text-center\"><img src=\"https://api.iconify.design/fluent-emoji/dashing-away.svg\" alt=\"gas\" class=\"w-16 h-16 mx-auto mb-4\" /><h4 class=\"text-xl font-black mb-3\">דחיסת גז</h4><p class=\"text-sm opacity-90 mb-3\">גז נדחס בקלות רבה!</p><div class=\"bg-white/20 p-3 rounded-xl text-sm\"><strong>הסיבה:</strong> המרווחים בין חלקיקי הגז הם עצומים. כשמפעילים לחץ, פשוט מקרבים את החלקיקים זה לזה.</div></div></div><div class=\"bg-gradient-to-br from-blue-500 to-cyan-600 p-6 rounded-3xl text-white shadow-xl\"><div class=\"text-center\"><img src=\"https://api.iconify.design/fluent-emoji/droplet.svg\" alt=\"droplet\" class=\"w-16 h-16 mx-auto mb-4\" /><h4 class=\"text-xl font-black mb-3\">דחיסת נוזל</h4><p class=\"text-sm opacity-90 mb-3\">נוזל כמעט ואינו נדחס!</p><div class=\"bg-white/20 p-3 rounded-xl text-sm\"><strong>הסיבה:</strong> המרווחים בין חלקיקי הנוזל קטנים מאוד. כמעט אין \"מקום\" לקרב אותם עוד יותר.</div></div></div><div class=\"bg-gradient-to-br from-slate-600 to-gray-700 p-6 rounded-3xl text-white shadow-xl\"><div class=\"text-center\"><img src=\"https://api.iconify.design/fluent-emoji/ice.svg\" alt=\"ice\" class=\"w-16 h-16 mx-auto mb-4\" /><h4 class=\"text-xl font-black mb-3\">דחיסת מוצק</h4><p class=\"text-sm opacity-90 mb-3\">מוצק אינו נדחס (אלא בלחץ עצום)!</p><div class=\"bg-white/20 p-3 rounded-xl text-sm\"><strong>הסיבה:</strong> החלקיקים כבר צמודים זה לזה במבנה קבוע. אין מרווחים שאפשר להקטין.</div></div></div></div>"
+      "type": "grid_cards",
+      "cols": 3,
+      "cards": [
+        {
+          "title": "דחיסת גז",
+          "icon": "dashing-away",
+          "variant": "indigo-gradient",
+          "content": "<p class=\"text-sm opacity-90 mb-3\">גז נדחס בקלות רבה!</p><p class=\"text-sm bg-white/20 p-3 rounded-xl\">המרווחים בין חלקיקי הגז הם עצומים. כשמפעילים לחץ, פשוט מקרבים את החלקיקים זה לזה.</p>"
+        },
+        {
+          "title": "דחיסת נוזל",
+          "icon": "droplet",
+          "variant": "blue-gradient",
+          "content": "<p class=\"text-sm opacity-90 mb-3\">נוזל כמעט ואינו נדחס!</p><p class=\"text-sm bg-white/20 p-3 rounded-xl\">המרווחים בין חלקיקי הנוזל קטנים מאוד. כמעט אין \"מקום\" לקרב אותם עוד יותר.</p>"
+        },
+        {
+          "title": "דחיסת מוצק",
+          "icon": "ice",
+          "variant": "slate-gradient",
+          "content": "<p class=\"text-sm opacity-90 mb-3\">מוצק אינו נדחס (אלא בלחץ עצום)!</p><p class=\"text-sm bg-white/20 p-3 rounded-xl\">החלקיקים כבר צמודים זה לזה במבנה קבוע. אין מרווחים שאפשר להקטין.</p>"
+        }
+      ]
     },
     {
       "type": "simulation",

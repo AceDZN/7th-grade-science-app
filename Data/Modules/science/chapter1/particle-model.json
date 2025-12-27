@@ -22,23 +22,53 @@
           "content": [
             {
               "title": "כל החומרים בנויים מחלקיקים זעירים",
-              "content": [ { "type": "text", "size": "md", "content": "החלקיקים קטנים מכדי שנוכל לראותם בעין בלתי מזוינת או אפילו במיקרוסקופ רגיל." } ]
+              "content": [
+                {
+                  "type": "text",
+                  "size": "md",
+                  "content": "החלקיקים קטנים מכדי שנוכל לראותם בעין בלתי מזוינת או אפילו במיקרוסקופ רגיל."
+                }
+              ]
             },
             {
               "title": "בין החלקיקים יש מרווחים של ריק",
-              "content": [ { "type": "text", "size": "md", "content": "ברווחים שבין החלקיקים אין שום דבר - לא אוויר, לא מים, כלום! זהו ריק אמיתי (ואקום)." } ]
+              "content": [
+                {
+                  "type": "text",
+                  "size": "md",
+                  "content": "ברווחים שבין החלקיקים אין שום דבר - לא אוויר, לא מים, כלום! זהו ריק אמיתי (ואקום)."
+                }
+              ]
             },
             {
               "title": "החלקיקים נמצאים בתנועה מתמדת",
-              "content": [ { "type": "text", "size": "md", "content": "החלקיקים נעים כל הזמן, גם במוצק! סוג התנועה ומהירותה משתנים לפי מצב הצבירה והטמפרטורה." } ]
+              "content": [
+                {
+                  "type": "text",
+                  "size": "md",
+                  "content": "החלקיקים נעים כל הזמן, גם במוצק! סוג התנועה ומהירותה משתנים לפי מצב הצבירה והטמפרטורה."
+                }
+              ]
             },
             {
               "title": "בין החלקיקים פועלים כוחות משיכה",
-              "content": [ { "type": "text", "size": "md", "content": "החלקיקים \"מושכים\" זה את זה. עוצמת כוחות אלה משתנה: חזקים במוצק, בינוניים בנוזל, חלשים בגז." } ]
+              "content": [
+                {
+                  "type": "text",
+                  "size": "md",
+                  "content": "החלקיקים \"מושכים\" זה את זה. עוצמת כוחות אלה משתנה: חזקים במוצק, בינוניים בנוזל, חלשים בגז."
+                }
+              ]
             },
             {
               "title": "חומרים שונים מכיוון שהחלקיקים שלהם שונים",
-              "content": [ { "type": "text", "size": "md", "content": "לכל חומר יש חלקיקים ייחודיים לו. לכן מים שונים מברזל, וברזל שונה מזהב." } ]
+              "content": [
+                {
+                  "type": "text",
+                  "size": "md",
+                  "content": "לכל חומר יש חלקיקים ייחודיים לו. לכן מים שונים מברזל, וברזל שונה מזהב."
+                }
+              ]
             }
           ]
         }
@@ -53,18 +83,48 @@
       "title": "השוואת מצבי הצבירה לפי מודל החלקיקים",
       "headers": ["מאפיין", "מוצק", "נוזל", "גז"],
       "rows": [
-        ["סידור החלקיקים", "מסודרים בצורה קבועה", "לא מסודרים, קרובים", "לא מסודרים, מרוחקים מאוד"],
+        [
+          "סידור החלקיקים",
+          "מסודרים בצורה קבועה",
+          "לא מסודרים, קרובים",
+          "לא מסודרים, מרוחקים מאוד"
+        ],
         ["מרווחים (ריק)", "קטנים מאוד", "קטנים", "גדולים מאוד"],
         ["כוחות משיכה", "חזקים מאוד", "בינוניים", "חלשים מאוד"],
-        ["סוג תנועה", "תנודה (רטט) במקום", "תנודה + החלקה", "תנועה חופשית בכל הכיוונים"],
+        [
+          "סוג תנועה",
+          "תנודה (רטט) במקום",
+          "תנודה + החלקה",
+          "תנועה חופשית בכל הכיוונים"
+        ],
         ["צורה", "קבועה", "משתנה לפי הכלי", "ממלא את כל הכלי"],
         ["נפח", "קבוע", "קבוע", "משתנה (תלוי בכלי)"]
       ],
       "variant": "blue"
     },
     {
-      "type": "text",
-      "content": "<div class=\"grid md:grid-cols-3 gap-6 my-8\"><div class=\"bg-gradient-to-br from-cyan-500 to-blue-600 p-6 rounded-3xl text-white shadow-xl\"><div class=\"text-center\"><img src=\"https://api.iconify.design/fluent-emoji/ice.svg\" alt=\"ice\" class=\"w-16 h-16 mx-auto mb-4\" /><h4 class=\"text-xl font-black mb-3\">מוצק</h4><p class=\"text-sm opacity-90\">החלקיקים מסודרים בצורה קבועה, צמודים זה לזה, ורוטטים במקומם. כוחות המשיכה החזקים שומרים על הצורה הקבועה.</p></div></div><div class=\"bg-gradient-to-br from-blue-400 to-indigo-500 p-6 rounded-3xl text-white shadow-xl\"><div class=\"text-center\"><img src=\"https://api.iconify.design/fluent-emoji/droplet.svg\" alt=\"droplet\" class=\"w-16 h-16 mx-auto mb-4\" /><h4 class=\"text-xl font-black mb-3\">נוזל</h4><p class=\"text-sm opacity-90\">החלקיקים קרובים אך לא מסודרים, מחליקים זה על זה ומחליפים מקומות. הנוזל מקבל את צורת הכלי.</p></div></div><div class=\"bg-gradient-to-br from-purple-400 to-pink-500 p-6 rounded-3xl text-white shadow-xl\"><div class=\"text-center\"><img src=\"https://api.iconify.design/fluent-emoji/dashing-away.svg\" alt=\"gas\" class=\"w-16 h-16 mx-auto mb-4\" /><h4 class=\"text-xl font-black mb-3\">גז</h4><p class=\"text-sm opacity-90\">החלקיקים מרוחקים מאוד, נעים בחופשיות ובמהירות בכל הכיוונים. הגז ממלא את כל נפח הכלי.</p></div></div></div>"
+      "type": "grid_cards",
+      "cols": 3,
+      "cards": [
+        {
+          "title": "מוצק",
+          "icon": "ice",
+          "variant": "blue",
+          "content": "<p class=\"text-sm opacity-90\">החלקיקים מסודרים בצורה קבועה, צמודים זה לזה, ורוטטים במקומם. כוחות המשיכה החזקים שומרים על הצורה הקבועה.</p>"
+        },
+        {
+          "title": "נוזל",
+          "icon": "droplet",
+          "variant": "indigo",
+          "content": "<p class=\"text-sm opacity-90\">החלקיקים קרובים אך לא מסודרים, מחליקים זה על זה ומחליפים מקומות. הנוזל מקבל את צורת הכלי.</p>"
+        },
+        {
+          "title": "גז",
+          "icon": "dashing-away",
+          "variant": "purple",
+          "content": "<p class=\"text-sm opacity-90\">החלקיקים מרוחקים מאוד, נעים בחופשיות ובמהירות בכל הכיוונים. הגז ממלא את כל נפח הכלי.</p>"
+        }
+      ]
     },
     {
       "type": "enrichment",

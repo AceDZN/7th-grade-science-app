@@ -29,12 +29,287 @@
       ]
     },
     {
-      "type": "text",
-      "content": "<div class=\"my-8\"><h3 class=\"text-2xl font-black text-center text-slate-800 mb-6\"><img src=\"https://api.iconify.design/fluent-emoji/fire.svg\" alt=\"fire\" class=\"w-8 h-8 inline\" /> תהליכים הדורשים חימום (הוספת אנרגיה)</h3><div class=\"grid md:grid-cols-3 gap-6\"><div class=\"bg-gradient-to-br from-orange-500 to-red-500 p-6 rounded-3xl text-white shadow-xl\"><div class=\"text-center\"><div class=\"flex justify-center items-center gap-2 mb-4\"><img src=\"https://api.iconify.design/fluent-emoji/ice.svg\" alt=\"ice\" class=\"w-12 h-12\" /><span class=\"text-2xl\">→</span><img src=\"https://api.iconify.design/fluent-emoji/droplet.svg\" alt=\"droplet\" class=\"w-12 h-12\" /></div><h4 class=\"text-xl font-black mb-2\">היתוך (התכה)</h4><p class=\"text-sm opacity-90 font-medium\">מוצק → נוזל</p><div class=\"bg-white/20 p-3 rounded-xl mt-4 text-sm\"><strong>מה קורה?</strong> החלקיקים מקבלים אנרגיה, מתחילים לנוע יותר, כוחות המשיכה נחלשים והחומר הופך לנוזל.</div><p class=\"mt-3 text-sm bg-white/30 p-2 rounded-lg\">דוגמה: קרח נמס והופך למים</p></div></div><div class=\"bg-gradient-to-br from-red-500 to-pink-500 p-6 rounded-3xl text-white shadow-xl\"><div class=\"text-center\"><div class=\"flex justify-center items-center gap-2 mb-4\"><img src=\"https://api.iconify.design/fluent-emoji/droplet.svg\" alt=\"droplet\" class=\"w-12 h-12\" /><span class=\"text-2xl\">→</span><img src=\"https://api.iconify.design/fluent-emoji/dashing-away.svg\" alt=\"gas\" class=\"w-12 h-12\" /></div><h4 class=\"text-xl font-black mb-2\">התאדות / רתיחה</h4><p class=\"text-sm opacity-90 font-medium\">נוזל → גז</p><div class=\"bg-white/20 p-3 rounded-xl mt-4 text-sm\"><strong>מה קורה?</strong> החלקיקים מקבלים מספיק אנרגיה כדי להתנתק מהנוזל ולברוח לאוויר.</div><p class=\"mt-3 text-sm bg-white/30 p-2 rounded-lg\">דוגמה: מים רותחים הופכים לאדים</p></div></div><div class=\"bg-gradient-to-br from-pink-500 to-purple-500 p-6 rounded-3xl text-white shadow-xl\"><div class=\"text-center\"><div class=\"flex justify-center items-center gap-2 mb-4\"><img src=\"https://api.iconify.design/fluent-emoji/ice.svg\" alt=\"ice\" class=\"w-12 h-12\" /><span class=\"text-2xl\">→</span><img src=\"https://api.iconify.design/fluent-emoji/dashing-away.svg\" alt=\"gas\" class=\"w-12 h-12\" /></div><h4 class=\"text-xl font-black mb-2\">המראה (סובלימציה)</h4><p class=\"text-sm opacity-90 font-medium\">מוצק → גז (ישירות!)</p><div class=\"bg-white/20 p-3 rounded-xl mt-4 text-sm\"><strong>מה קורה?</strong> החלקיקים מקבלים מספיק אנרגיה לעבור ישירות ממוצק לגז, בלי לעבור דרך נוזל.</div><p class=\"mt-3 text-sm bg-white/30 p-2 rounded-lg\">דוגמה: קרח יבש (CO₂) הופך ישר לגז</p></div></div></div></div>"
+      "type": "section",
+      "ClassName": "p-2 rounded-3xl",
+      "content": [
+        {
+          "type": "h3",
+          "className": "text-2xl font-black text-center text-slate-800 mb-6",
+          "icon": "fire",
+          "content": "תהליכים הדורשים חימום (הוספת אנרגיה)"
+        },
+        {
+          "type": "grid_cards",
+          "cols": 3,
+          "cards": [
+            {
+              "title": "היתוך (התכה)",
+              "icon": "droplet",
+              "variant": "orange-gradient",
+              "content": [
+                {
+                  "type": "icon_flow",
+                  "icons": ["ice", "droplet"],
+                  "size": "md"
+                },
+                {
+                  "type": "p",
+                  "content": "מוצק ← נוזל",
+                  "size": "sm",
+                  "className": "opacity-90 font-medium"
+                },
+                {
+                  "type": "highlight_box",
+                  "variant": "info",
+                  "content": [
+                    {
+                      "type": "p",
+                      "content": "<strong>מה קורה?</strong> החלקיקים מקבלים אנרגיה, מתחילים לנוע יותר, כוחות המשיכה נחלשים והחומר הופך לנוזל.",
+                      "size": "sm"
+                    }
+                  ]
+                },
+                {
+                  "type": "highlight_box",
+                  "variant": "example",
+                  "className": "mt-3",
+                  "content": [
+                    {
+                      "type": "p",
+                      "content": "דוגמה: קרח נמס והופך למים",
+                      "size": "sm"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "התאדות / רתיחה",
+              "icon": "dashing-away",
+              "variant": "pink-gradient",
+              "content": [
+                {
+                  "type": "icon_flow",
+                  "icons": ["droplet", "dashing-away"],
+                  "size": "md"
+                },
+                {
+                  "type": "p",
+                  "content": "נוזל ← גז",
+                  "size": "sm",
+                  "className": "opacity-90 font-medium"
+                },
+                {
+                  "type": "highlight_box",
+                  "variant": "info",
+                  "content": [
+                    {
+                      "type": "p",
+                      "content": "<strong>מה קורה?</strong> החלקיקים מקבלים מספיק אנרגיה כדי להתנתק מהנוזל ולברוח לאוויר.",
+                      "size": "sm"
+                    }
+                  ]
+                },
+                {
+                  "type": "highlight_box",
+                  "variant": "example",
+                  "className": "mt-3",
+                  "content": [
+                    {
+                      "type": "p",
+                      "content": "דוגמה: מים רותחים הופכים לאדים",
+                      "size": "sm"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "המראה (סובלימציה)",
+              "icon": "cyclone",
+              "variant": "purple-gradient",
+              "content": [
+                {
+                  "type": "icon_flow",
+                  "icons": ["ice", "dashing-away"],
+                  "size": "md"
+                },
+                {
+                  "type": "p",
+                  "content": "מוצק ← גז (ישירות!)",
+                  "size": "sm",
+                  "className": "opacity-90 font-medium"
+                },
+                {
+                  "type": "highlight_box",
+                  "variant": "info",
+                  "content": [
+                    {
+                      "type": "p",
+                      "content": "<strong>מה קורה?</strong> החלקיקים מקבלים מספיק אנרגיה לעבור ישירות ממוצק לגז, בלי לעבור דרך נוזל.",
+                      "size": "sm"
+                    }
+                  ]
+                },
+                {
+                  "type": "highlight_box",
+                  "variant": "example",
+                  "className": "mt-3",
+                  "content": [
+                    {
+                      "type": "p",
+                      "content": "דוגמה: קרח יבש (CO₂) הופך ישר לגז",
+                      "size": "sm"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
+
     {
-      "type": "text",
-      "content": "<div class=\"my-8\"><h3 class=\"text-2xl font-black text-center text-slate-800 mb-6\"><img src=\"https://api.iconify.design/fluent-emoji/snowflake.svg\" alt=\"snowflake\" class=\"w-8 h-8 inline\" /> תהליכים הדורשים קירור (הפחתת אנרגיה)</h3><div class=\"grid md:grid-cols-3 gap-6\"><div class=\"bg-gradient-to-br from-blue-500 to-cyan-500 p-6 rounded-3xl text-white shadow-xl\"><div class=\"text-center\"><div class=\"flex justify-center items-center gap-2 mb-4\"><img src=\"https://api.iconify.design/fluent-emoji/droplet.svg\" alt=\"droplet\" class=\"w-12 h-12\" /><span class=\"text-2xl\">→</span><img src=\"https://api.iconify.design/fluent-emoji/ice.svg\" alt=\"ice\" class=\"w-12 h-12\" /></div><h4 class=\"text-xl font-black mb-2\">הקפאה (התמצקות)</h4><p class=\"text-sm opacity-90 font-medium\">נוזל → מוצק</p><div class=\"bg-white/20 p-3 rounded-xl mt-4 text-sm\"><strong>מה קורה?</strong> החלקיקים מאבדים אנרגיה, נעים לאט יותר, כוחות המשיכה מתחזקים והחומר מתמצק.</div><p class=\"mt-3 text-sm bg-white/30 p-2 rounded-lg\">דוגמה: מים קופאים והופכים לקרח</p></div></div><div class=\"bg-gradient-to-br from-cyan-500 to-teal-500 p-6 rounded-3xl text-white shadow-xl\"><div class=\"text-center\"><div class=\"flex justify-center items-center gap-2 mb-4\"><img src=\"https://api.iconify.design/fluent-emoji/dashing-away.svg\" alt=\"gas\" class=\"w-12 h-12\" /><span class=\"text-2xl\">→</span><img src=\"https://api.iconify.design/fluent-emoji/droplet.svg\" alt=\"droplet\" class=\"w-12 h-12\" /></div><h4 class=\"text-xl font-black mb-2\">התעבות (עיבוי)</h4><p class=\"text-sm opacity-90 font-medium\">גז → נוזל</p><div class=\"bg-white/20 p-3 rounded-xl mt-4 text-sm\"><strong>מה קורה?</strong> חלקיקי הגז מאבדים אנרגיה, נעים לאט יותר ומתקרבים זה לזה עד שהופכים לנוזל.</div><p class=\"mt-3 text-sm bg-white/30 p-2 rounded-lg\">דוגמה: אדי מים הופכים לטיפות על מראה</p></div></div><div class=\"bg-gradient-to-br from-teal-500 to-emerald-500 p-6 rounded-3xl text-white shadow-xl\"><div class=\"text-center\"><div class=\"flex justify-center items-center gap-2 mb-4\"><img src=\"https://api.iconify.design/fluent-emoji/dashing-away.svg\" alt=\"gas\" class=\"w-12 h-12\" /><span class=\"text-2xl\">→</span><img src=\"https://api.iconify.design/fluent-emoji/ice.svg\" alt=\"ice\" class=\"w-12 h-12\" /></div><h4 class=\"text-xl font-black mb-2\">ריבוץ (דפוזיציה)</h4><p class=\"text-sm opacity-90 font-medium\">גז → מוצק (ישירות!)</p><div class=\"bg-white/20 p-3 rounded-xl mt-4 text-sm\"><strong>מה קורה?</strong> חלקיקי הגז מתקררים במהירות כזו שהם עוברים ישירות למצב מוצק.</div><p class=\"mt-3 text-sm bg-white/30 p-2 rounded-lg\">דוגמה: כפור שנוצר על חלון בבוקר קר</p></div></div></div></div>"
+      "type": "section",
+      "className": "p-2 rounded-3xl",
+      "content": [
+        {
+          "type": "h3",
+          "className": "text-2xl font-black text-center text-slate-800 mb-6",
+          "icon": "snowflake",
+          "content": "תהליכים הדורשים קירור (הפחתת אנרגיה)"
+        },
+        {
+          "type": "grid_cards",
+          "cols": 3,
+          "cards": [
+            {
+              "title": "הקפאה (התמצקות)",
+              "icon": "ice",
+              "variant": "cyan",
+              "content": [
+                {
+                  "type": "icon_flow",
+                  "icons": ["droplet", "ice"],
+                  "size": "md"
+                },
+                {
+                  "type": "p",
+                  "content": "נוזל ← מוצק",
+                  "size": "sm",
+                  "className": "opacity-90 font-medium"
+                },
+                {
+                  "type": "highlight_box",
+                  "variant": "info",
+                  "content": [
+                    {
+                      "type": "p",
+                      "content": "<strong>מה קורה?</strong> החלקיקים מאבדים אנרגיה, נעים לאט יותר, כוחות המשיכה מתחזקים והחומר מתמצק.",
+                      "size": "sm"
+                    }
+                  ]
+                },
+                {
+                  "type": "highlight_box",
+                  "variant": "example",
+                  "className": "mt-3",
+                  "content": [
+                    {
+                      "type": "p",
+                      "content": "דוגמה: מים קופאים והופכים לקרח",
+                      "size": "sm"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "התעבות (עיבוי)",
+              "icon": "droplet",
+              "variant": "teal",
+              "content": [
+                {
+                  "type": "icon_flow",
+                  "icons": ["dashing-away", "droplet"],
+                  "size": "md"
+                },
+                {
+                  "type": "p",
+                  "content": "גז ← נוזל",
+                  "size": "sm",
+                  "className": "opacity-90 font-medium"
+                },
+                {
+                  "type": "highlight_box",
+                  "variant": "info",
+                  "content": [
+                    {
+                      "type": "p",
+                      "content": "<strong>מה קורה?</strong> חלקיקי הגז מאבדים אנרגיה, נעים לאט יותר ומתקרבים זה לזה עד שהופכים לנוזל.",
+                      "size": "sm"
+                    }
+                  ]
+                },
+                {
+                  "type": "highlight_box",
+                  "variant": "example",
+                  "className": "mt-3",
+                  "content": [
+                    {
+                      "type": "p",
+                      "content": "דוגמה: אדי מים הופכים לטיפות על מראה",
+                      "size": "sm"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "ריבוץ (דפוזיציה)",
+              "icon": "snowflake",
+              "variant": "teal",
+              "content": [
+                {
+                  "type": "icon_flow",
+                  "icons": ["dashing-away", "ice"],
+                  "size": "md"
+                },
+                {
+                  "type": "p",
+                  "content": "גז ← מוצק (ישירות!)",
+                  "size": "sm",
+                  "className": "opacity-90 font-medium"
+                },
+                {
+                  "type": "highlight_box",
+                  "variant": "info",
+                  "content": [
+                    {
+                      "type": "p",
+                      "content": "<strong>מה קורה?</strong> חלקיקי הגז מתקררים במהירות כזו שהם עוברים ישירות למצב מוצק.",
+                      "size": "sm"
+                    }
+                  ]
+                },
+                {
+                  "type": "highlight_box",
+                  "variant": "example",
+                  "className": "mt-3",
+                  "content": [
+                    {
+                      "type": "p",
+                      "content": "דוגמה: כפור שנוצר על חלון בבוקר קר",
+                      "size": "sm"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "type": "simulation",
@@ -64,7 +339,7 @@
     },
     {
       "type": "text",
-      "content": "<div class=\"bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-3xl border border-blue-200 my-8\"><h4 class=\"text-xl font-black text-blue-900 mb-4 flex items-center gap-2\"><img src=\"https://api.iconify.design/fluent-emoji/magnifying-glass-tilted-left.svg\" alt=\"search\" class=\"w-8 h-8\" /> ההבדל בין התאדות לרתיחה</h4><div class=\"grid md:grid-cols-2 gap-6\"><div class=\"bg-white p-5 rounded-2xl shadow-sm\"><h5 class=\"font-bold text-blue-700 mb-2 flex items-center gap-2\"><img src=\"https://api.iconify.design/fluent-emoji/water-wave.svg\" alt=\"wave\" class=\"w-6 h-6\" /> התאדות</h5><ul class=\"text-sm text-slate-600 space-y-2\"><li>✓ מתרחשת <strong>בכל טמפרטורה</strong></li><li>✓ קורה רק <strong>על פני השטח</strong> של הנוזל</li><li>✓ תהליך <strong>איטי</strong></li><li>✓ דוגמה: כביסה שמתייבשת</li></ul></div><div class=\"bg-white p-5 rounded-2xl shadow-sm\"><h5 class=\"font-bold text-red-700 mb-2 flex items-center gap-2\"><img src=\"https://api.iconify.design/fluent-emoji/bubbles.svg\" alt=\"bubbles\" class=\"w-6 h-6\" /> רתיחה</h5><ul class=\"text-sm text-slate-600 space-y-2\"><li>✓ מתרחשת <strong>בטמפרטורה ספציפית</strong> (נקודת רתיחה)</li><li>✓ קורה <strong>בכל הנפח</strong> של הנוזל (בועות!)</li><li>✓ תהליך <strong>מהיר</strong></li><li>✓ דוגמה: מים רותחים בסיר</li></ul></div></div></div>"
+      "content": "<div class=\"bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-3xl border border-blue-200 \"><h4 class=\"text-xl font-black text-blue-900 mb-4 flex items-center gap-2\"><img src=\"https://api.iconify.design/fluent-emoji/magnifying-glass-tilted-left.svg\" alt=\"search\" class=\"w-8 h-8\" /> ההבדל בין התאדות לרתיחה</h4><div class=\"grid md:grid-cols-2 gap-6\"><div class=\"bg-white p-5 rounded-2xl shadow-sm\"><h5 class=\"font-bold text-blue-700 mb-2 flex items-center gap-2\"><img src=\"https://api.iconify.design/fluent-emoji/water-wave.svg\" alt=\"wave\" class=\"w-6 h-6\" /> התאדות</h5><ul class=\"text-sm text-slate-600 space-y-2\"><li>✓ מתרחשת <strong>בכל טמפרטורה</strong></li><li>✓ קורה רק <strong>על פני השטח</strong> של הנוזל</li><li>✓ תהליך <strong>איטי</strong></li><li>✓ דוגמה: כביסה שמתייבשת</li></ul></div><div class=\"bg-white p-5 rounded-2xl shadow-sm\"><h5 class=\"font-bold text-red-700 mb-2 flex items-center gap-2\"><img src=\"https://api.iconify.design/fluent-emoji/bubbles.svg\" alt=\"bubbles\" class=\"w-6 h-6\" /> רתיחה</h5><ul class=\"text-sm text-slate-600 space-y-2\"><li>✓ מתרחשת <strong>בטמפרטורה ספציפית</strong> (נקודת רתיחה)</li><li>✓ קורה <strong>בכל הנפח</strong> של הנוזל (בועות!)</li><li>✓ תהליך <strong>מהיר</strong></li><li>✓ דוגמה: מים רותחים בסיר</li></ul></div></div></div>"
     },
     {
       "type": "enrichment",

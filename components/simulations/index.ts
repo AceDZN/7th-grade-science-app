@@ -8,3 +8,4 @@ export { ParticleModelSimulation } from "./science/ParticleModelSimulation";
 export { SurfaceTensionSimulation } from "./science/SurfaceTensionSimulation";
 export { PhaseTransitionSimulation } from "./science/PhaseTransitionSimulation";
 export { DensityCalculator } from "./science/DensityCalculator";
+export { MeniscusIllustration } from "./science/MeniscusIllustration";
