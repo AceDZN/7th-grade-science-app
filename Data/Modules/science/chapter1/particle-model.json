@@ -11,8 +11,38 @@
       "subtitle": "מודל מדעי המסביר את מבנה החומר ותופעות שונות הקשורות בעולם החומר"
     },
     {
-      "type": "text",
-      "content": "<div class=\"bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-3xl border border-indigo-100 shadow-sm mb-8\"><h3 class=\"text-2xl font-black text-indigo-900 mb-6 text-center\"><img src=\"https://api.iconify.design/fluent-emoji/microscope.svg\" alt=\"microscope\" class=\"w-8 h-8 inline\" /> חמשת העקרונות של מודל החלקיקים</h3><div class=\"grid gap-4\"><div class=\"flex items-start gap-4 bg-white p-5 rounded-2xl border border-indigo-100 shadow-sm\"><span class=\"flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-black text-lg\">1</span><div><strong class=\"text-indigo-900\">כל החומרים בנויים מחלקיקים זעירים</strong><p class=\"text-slate-600 mt-1\">החלקיקים קטנים מכדי שנוכל לראותם בעין בלתי מזוינת או אפילו במיקרוסקופ רגיל.</p></div></div><div class=\"flex items-start gap-4 bg-white p-5 rounded-2xl border border-indigo-100 shadow-sm\"><span class=\"flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-black text-lg\">2</span><div><strong class=\"text-indigo-900\">בין החלקיקים יש מרווחים של ריק</strong><p class=\"text-slate-600 mt-1\">ברווחים שבין החלקיקים אין שום דבר - לא אוויר, לא מים, כלום! זהו ריק אמיתי (ואקום).</p></div></div><div class=\"flex items-start gap-4 bg-white p-5 rounded-2xl border border-indigo-100 shadow-sm\"><span class=\"flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-black text-lg\">3</span><div><strong class=\"text-indigo-900\">החלקיקים נמצאים בתנועה מתמדת</strong><p class=\"text-slate-600 mt-1\">החלקיקים נעים כל הזמן, גם במוצק! סוג התנועה ומהירותה משתנים לפי מצב הצבירה והטמפרטורה.</p></div></div><div class=\"flex items-start gap-4 bg-white p-5 rounded-2xl border border-indigo-100 shadow-sm\"><span class=\"flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-black text-lg\">4</span><div><strong class=\"text-indigo-900\">בין החלקיקים פועלים כוחות משיכה</strong><p class=\"text-slate-600 mt-1\">החלקיקים \"מושכים\" זה את זה. עוצמת כוחות אלה משתנה: חזקים במוצק, בינוניים בנוזל, חלשים בגז.</p></div></div><div class=\"flex items-start gap-4 bg-white p-5 rounded-2xl border border-indigo-100 shadow-sm\"><span class=\"flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-black text-lg\">5</span><div><strong class=\"text-indigo-900\">חומרים שונים מכיוון שהחלקיקים שלהם שונים</strong><p class=\"text-slate-600 mt-1\">לכל חומר יש חלקיקים ייחודיים לו. לכן מים שונים מברזל, וברזל שונה מזהב.</p></div></div></div></div>"
+      "type": "introduction_block",
+      "title": "חמשת העקרונות של מודל החלקיקים",
+      "icon": "microscope",
+      "theme": "primary-blue",
+      "content": [
+        {
+          "type": "list_items",
+          "theme": "circular",
+          "content": [
+            {
+              "title": "כל החומרים בנויים מחלקיקים זעירים",
+              "content": [ { "type": "text", "size": "md", "content": "החלקיקים קטנים מכדי שנוכל לראותם בעין בלתי מזוינת או אפילו במיקרוסקופ רגיל." } ]
+            },
+            {
+              "title": "בין החלקיקים יש מרווחים של ריק",
+              "content": [ { "type": "text", "size": "md", "content": "ברווחים שבין החלקיקים אין שום דבר - לא אוויר, לא מים, כלום! זהו ריק אמיתי (ואקום)." } ]
+            },
+            {
+              "title": "החלקיקים נמצאים בתנועה מתמדת",
+              "content": [ { "type": "text", "size": "md", "content": "החלקיקים נעים כל הזמן, גם במוצק! סוג התנועה ומהירותה משתנים לפי מצב הצבירה והטמפרטורה." } ]
+            },
+            {
+              "title": "בין החלקיקים פועלים כוחות משיכה",
+              "content": [ { "type": "text", "size": "md", "content": "החלקיקים \"מושכים\" זה את זה. עוצמת כוחות אלה משתנה: חזקים במוצק, בינוניים בנוזל, חלשים בגז." } ]
+            },
+            {
+              "title": "חומרים שונים מכיוון שהחלקיקים שלהם שונים",
+              "content": [ { "type": "text", "size": "md", "content": "לכל חומר יש חלקיקים ייחודיים לו. לכן מים שונים מברזל, וברזל שונה מזהב." } ]
+            }
+          ]
+        }
+      ]
     },
     {
       "type": "simulation",

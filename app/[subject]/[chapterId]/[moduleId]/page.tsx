@@ -6,15 +6,18 @@ import ModuleClient from "./module-client";
 import type { Metadata, ResolvingMetadata } from "next";
 import { SITE_NAME, SUBJECTS } from "@/lib/constants";
 
+type SubjectId = "science" | "math" | "history";
+
 interface PageProps {
   params: Promise<{
-    subject: string;
+    subject: SubjectId;
     chapterId: string;
     moduleId: string;
   }>;
 }
 
 async function getModuleData(
+  subjectId: SubjectId,
   chapterId: string,
   moduleId: string
 ): Promise<DynamicModuleData | null> {
@@ -22,6 +25,7 @@ async function getModuleData(
     process.cwd(),
     "Data",
     "Modules",
+    subjectId,
     chapterId,
     `${moduleId}.json`
   );
@@ -39,11 +43,11 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const { subject: subjectId, chapterId, moduleId } = await params;
-  const dynamicData = await getModuleData(chapterId, moduleId);
+  const dynamicData = await getModuleData(subjectId, chapterId, moduleId);
 
   const subject = SUBJECTS.find((s) => s.id === subjectId);
   const chapter = subject?.chapters.find((c) => c.id === chapterId);
-  
+
   const chapterName = chapter?.title || "";
   const moduleName = dynamicData?.title || "";
 
@@ -63,17 +67,22 @@ export default async function Page({ params }: PageProps) {
   const resolvedParams = await params;
   const chapterId = resolvedParams.chapterId as ChapterId;
   const moduleId = resolvedParams.moduleId as ModuleId;
+  const subjectId = resolvedParams.subject as SubjectId;
 
-  const dynamicData = await getModuleData(chapterId, moduleId);
+  const dynamicData = await getModuleData(subjectId, chapterId, moduleId);
 
   // Dynamically load questions for the specific chapter on the server
   let questions: Question[] = [];
   try {
     if (chapterId === ChapterId.Chapter1) {
-      const { CHAPTER1_QUESTIONS } = await import("@/lib/constants/chapter_1");
+      const { CHAPTER1_QUESTIONS } = await import(
+        "@/lib/constants/science_chapter_1"
+      );
       questions = CHAPTER1_QUESTIONS[moduleId] || [];
     } else if (chapterId === ChapterId.Chapter2) {
-      const { CHAPTER2_QUESTIONS } = await import("@/lib/constants/chapter_2");
+      const { CHAPTER2_QUESTIONS } = await import(
+        "@/lib/constants/science_chapter_2"
+      );
       questions = CHAPTER2_QUESTIONS[moduleId] || [];
     }
   } catch (error) {

@@ -4,6 +4,7 @@ import { ContentBlock } from '@/lib/types';
 import { DynamicHero } from './DynamicHero';
 import { DynamicGridCards } from './DynamicGridCards';
 import { DynamicSimulation } from './DynamicSimulation';
+import { IntroductionBlock } from './IntroductionBlock';
 import { Quiz } from '@/components/Quiz';
 import { Enrichment } from '@/components/Enrichment';
 import { ScientificTable } from '@/components/ScientificTable';
@@ -19,6 +20,8 @@ export const ContentRenderer = ({ blocks, onQuizComplete }: { blocks: ContentBlo
             return <DynamicGridCards key={idx} block={block} />;
           case 'simulation':
             return <DynamicSimulation key={idx} block={block} />;
+          case 'introduction_block':
+            return <IntroductionBlock key={idx} block={block} />;
           case 'quiz':
             return (
                 <div key={idx} className="bg-slate-50 p-4 md:p-6 lg:p-8 rounded-xl md:rounded-2xl lg:rounded-3xl border border-slate-200">

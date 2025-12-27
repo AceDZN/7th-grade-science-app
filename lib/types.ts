@@ -65,11 +65,40 @@ export interface LearningState {
   examActive: boolean;
 }
 
-export type ContentBlockType = 'text' | 'hero' | 'grid_cards' | 'quiz' | 'simulation' | 'enrichment' | 'scientific_table';
+export type ContentBlockType = 'text' | 'hero' | 'grid_cards' | 'quiz' | 'simulation' | 'enrichment' | 'scientific_table' | 'introduction_block';
 
 export interface BaseContentBlock {
   type: ContentBlockType;
   id?: string;
+}
+
+export type InnerContentType = 'text' | 'list_items';
+
+export interface InnerTextBlock {
+  type: 'text';
+  content: string;
+  size?: 'sm' | 'md' | 'lg';
+}
+
+export interface InnerListItem {
+  title?: string;
+  content: InnerTextBlock[];
+}
+
+export interface InnerListBlock {
+  type: 'list_items';
+  theme?: 'circular' | 'numeric';
+  content: InnerListItem[];
+}
+
+export type InnerContentBlock = InnerTextBlock | InnerListBlock;
+
+export interface IntroductionBlock extends BaseContentBlock {
+  type: 'introduction_block';
+  title: string;
+  icon?: string;
+  theme?: 'primary-orange' | 'primary-blue' | 'primary-purple' | 'primary-emerald';
+  content: InnerContentBlock[];
 }
 
 export interface TextBlock extends BaseContentBlock {
@@ -119,7 +148,7 @@ export interface ScientificTableBlock extends BaseContentBlock {
     note?: string;
 }
 
-export type ContentBlock = TextBlock | HeroBlock | GridCardsBlock | QuizBlock | SimulationBlock | EnrichmentBlock | ScientificTableBlock;
+export type ContentBlock = TextBlock | HeroBlock | GridCardsBlock | QuizBlock | SimulationBlock | EnrichmentBlock | ScientificTableBlock | IntroductionBlock;
 
 export interface DynamicModuleData {
   id: string;
