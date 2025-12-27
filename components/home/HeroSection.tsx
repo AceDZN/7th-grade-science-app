@@ -14,11 +14,10 @@ export const HeroSection: React.FC = () => {
         ברוכים הבאים לעתיד הלימוד
       </motion.div>
       <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-slate-900 tracking-tight leading-tight">
-        מסע אל עולם <span className="text-blue-600 italic">החומר</span>
+        מסע אל עולם <span className="text-blue-600 italic">הידע</span>
       </h1>
       <p className="text-base md:text-lg lg:text-2xl text-slate-500 font-medium max-w-3xl mx-auto leading-relaxed px-4">
-        גלו את הסודות שמרכיבים את היקום שלנו דרך חוויה אינטראקטיבית, חכמה
-        ומרהיבה.
+        גלו עולמות חדשים דרך חוויה אינטראקטיבית, חכמה ומרהיבה.
       </p>
     </header>
   );

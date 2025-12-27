@@ -9,17 +9,19 @@ import { ChapterId, ModuleId, Chapter } from "@/lib/types";
 interface ChapterSidebarProps {
   chapter: Chapter;
   chapterId: ChapterId;
+  subjectId: string;
 }
 
 export const ChapterSidebar: React.FC<ChapterSidebarProps> = ({
   chapter,
-  chapterId
+  chapterId,
+  subjectId
 }) => {
   const pathname = usePathname();
   const [completedModules, setCompletedModules] = useState<ModuleId[]>([]);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  // Extract moduleId from pathname: /chapter/[id]/[moduleId]
+  // Extract moduleId from pathname: /[subject]/[chapterId]/[moduleId]
   const pathParts = pathname?.split("/") || [];
   const currentModuleId = (pathParts[3] as ModuleId) || chapter.modules[0]?.id;
 
@@ -77,14 +79,14 @@ export const ChapterSidebar: React.FC<ChapterSidebarProps> = ({
       `}
       >
         <Link
-          href="/"
+          href={`/${subjectId}`}
           className="flex items-center gap-2 md:gap-3 mb-6 md:mb-8 lg:mb-10 text-slate-400 hover:text-blue-600 transition-colors group"
         >
           <span className="text-xl md:text-2xl group-hover:-translate-x-1 transition-transform">
             →
           </span>
           <span className="font-extrabold text-xs md:text-sm uppercase tracking-widest">
-            חזרה לתפריט הראשי
+            חזרה לפרקים
           </span>
         </Link>
 
@@ -112,7 +114,7 @@ export const ChapterSidebar: React.FC<ChapterSidebarProps> = ({
             return (
               <Link
                 key={m.id}
-                href={`/chapter/${chapterId}/${m.id}`}
+                href={`/${subjectId}/${chapterId}/${m.id}`}
                 className="block mb-4 md:mb-4"
                 onClick={() => setSidebarOpen(false)}
               >

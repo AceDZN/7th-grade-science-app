@@ -1,8 +1,8 @@
-import { Chapter, ChapterId, ModuleId } from "../types";
+import { Chapter, ChapterId, ModuleId, Subject } from "../types";
 
 export const SITE_NAME = "מדעים+";
 
-export const CHAPTERS: Chapter[] = [
+export const SCIENCE_CHAPTERS: Chapter[] = [
   {
     id: ChapterId.Chapter1,
     title: "פרק 1: עולם החומר",
@@ -100,4 +100,28 @@ export const CHAPTERS: Chapter[] = [
       }
     ]
   }
+];
+
+export const SUBJECTS: Subject[] = [
+  {
+    id: "science",
+    title: "מדעים",
+    description: "פיזיקה, כימיה וביולוגיה לכיתות ז",
+    icon: "microscope",
+    chapters: SCIENCE_CHAPTERS
+  }
+  //   {
+  //     id: "math",
+  //     title: "מתמטיקה",
+  //     description: "אלגברה, גיאומטריה וחשבון",
+  //     icon: "abacus",
+  //     chapters: []
+  //   },
+  //   {
+  //     id: "history",
+  //     title: "היסטוריה",
+  //     description: "מסע בזמן אל העבר",
+  //     icon: "scroll",
+  //     chapters: []
+  //   }
 ];
