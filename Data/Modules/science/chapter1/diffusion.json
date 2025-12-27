@@ -11,8 +11,22 @@
       "subtitle": "כיצד חומרים מתערבבים מעצמם בזכות תנועת החלקיקים?"
     },
     {
-      "type": "text",
-      "content": "<div class=\"bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-3xl border border-purple-100 shadow-sm mb-8\"><h3 class=\"text-2xl font-black text-purple-900 mb-4 text-center\"><img src=\"https://api.iconify.design/fluent-emoji/cyclone.svg\" alt=\"cyclone\" class=\"w-8 h-8 inline\" /> מהו פעפוע?</h3><p class=\"text-lg text-slate-700 text-center mb-4\"><strong>פעפוע (דיפוזיה)</strong> הוא תהליך שבו חלקיקי חומר נעים <strong>מאזור בו הם צפופים יותר</strong> לאזור בו הם <strong>פחות צפופים</strong> (או אינם נמצאים כלל).</p><p class=\"text-center p-4 bg-white rounded-2xl border border-purple-200 shadow-sm\"><img src=\"https://api.iconify.design/fluent-emoji/high-voltage.svg\" alt=\"high-voltage\" class=\"w-5 h-5 inline\" /> הפעפוע מתרחש <strong>מעצמו</strong> - בלי שאנחנו עושים משהו! הוא קורה בזכות התנועה המתמדת של החלקיקים.</p></div>"
+      "type": "introduction_block",
+      "title": "מהו פעפוע?",
+      "icon": "cyclone",
+      "theme": "primary-purple",
+      "content": [
+        {
+          "type": "text",
+          "size": "lg",
+          "content": "<strong>פעפוע (דיפוזיה)</strong> הוא תהליך שבו חלקיקי חומר נעים <strong>מאזור בו הם צפופים יותר</strong> לאזור בו הם <strong>פחות צפופים</strong> (או אינם נמצאים כלל)."
+        },
+        {
+          "type": "text",
+          "size": "md",
+          "content": "הפעפוע מתרחש <strong>מעצמו</strong> - בלי שאנחנו עושים משהו! הוא קורה בזכות התנועה המתמדת של החלקיקים."
+        }
+      ]
     },
     {
       "type": "simulation",

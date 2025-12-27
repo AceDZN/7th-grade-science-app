@@ -8,8 +8,17 @@
       "title": "מבחן מסכם: עולם החומר"
     },
     {
-       "type": "text",
-       "content": "<p class=\"text-xl text-center mb-8\">בחן את עצמך: האם הבנת את עקרונות מודל החלקיקים?</p>"
+       "type": "introduction_block",
+       "title": "בחן את עצמך",
+       "icon": "thinking-face",
+       "theme": "primary-blue",
+       "content": [
+           {
+             "type": "text",
+             "size": "lg",
+             "content": "בחן את עצמך: האם הבנת את עקרונות מודל החלקיקים?"
+           }
+       ]
     },
     {
         "type": "quiz",

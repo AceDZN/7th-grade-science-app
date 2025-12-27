@@ -11,8 +11,22 @@
       "subtitle": "כיצד חומרים עוברים בין מוצק, נוזל וגז?"
     },
     {
-      "type": "text",
-      "content": "<div class=\"bg-gradient-to-br from-violet-50 to-purple-50 p-8 rounded-3xl border border-violet-100 shadow-sm mb-8\"><h3 class=\"text-2xl font-black text-violet-900 mb-4 text-center\"><img src=\"https://api.iconify.design/fluent-emoji/counterclockwise-arrows-button.svg\" alt=\"arrows\" class=\"w-8 h-8 inline\" /> מהו מעבר פאזה (שינוי מצב צבירה)?</h3><p class=\"text-lg text-slate-700 text-center mb-4\"><strong>מעבר פאזה</strong> הוא תהליך שבו חומר עובר ממצב צבירה אחד לאחר. המעבר מתרחש כאשר מוסיפים או מורידים <strong>אנרגיה (חום)</strong> מהחומר.</p><p class=\"text-center p-4 bg-white rounded-2xl border border-violet-200 shadow-sm\"><img src=\"https://api.iconify.design/fluent-emoji/high-voltage.svg\" alt=\"voltage\" class=\"w-5 h-5 inline\" /> <strong>חשוב!</strong> במעבר פאזה, כמות החומר (המסה) לא משתנה - רק הסידור והמרחקים בין החלקיקים משתנים!</p></div>"
+      "type": "introduction_block",
+      "title": "מהו מעבר פאזה (שינוי מצב צבירה)?",
+      "icon": "counterclockwise-arrows-button",
+      "theme": "primary-purple",
+      "content": [
+        {
+          "type": "text",
+          "size": "lg",
+          "content": "<strong>מעבר פאזה</strong> הוא תהליך שבו חומר עובר ממצב צבירה אחד לאחר. המעבר מתרחש כאשר מוסיפים או מורידים <strong>אנרגיה (חום)</strong> מהחומר."
+        },
+        {
+          "type": "text",
+          "size": "md",
+          "content": "<strong>חשוב!</strong> במעבר פאזה, כמות החומר (המסה) לא משתנה - רק הסידור והמרחקים בין החלקיקים משתנים!"
+        }
+      ]
     },
     {
       "type": "text",

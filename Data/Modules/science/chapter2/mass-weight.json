@@ -11,8 +11,17 @@
       "subtitle": "שני מושגים שונים שלעתים מבלבלים ביניהם"
     },
     {
-      "type": "text",
-      "content": "<div class=\"bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-3xl border border-emerald-100 shadow-sm mb-8\"><p class=\"text-xl leading-relaxed text-slate-700 text-center\">בחיי היום-יום אנחנו אומרים \"משקל\" כשאנחנו מתכוונים ל\"מסה\". <strong>במדע, אלו שני דברים שונים לגמרי!</strong></p></div>"
+      "type": "introduction_block",
+      "title": "מסה מול משקל",
+      "icon": "balance-scale",
+      "theme": "primary-emerald",
+      "content": [
+        {
+          "type": "text",
+          "size": "lg",
+          "content": "בחיי היום-יום אנחנו אומרים \"משקל\" כשאנחנו מתכוונים ל\"מסה\". <strong>במדע, אלו שני דברים שונים לגמרי!</strong>"
+        }
+      ]
     },
     {
       "type": "grid_cards",

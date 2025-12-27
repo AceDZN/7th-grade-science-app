@@ -11,8 +11,17 @@
       "subtitle": "שני מושגי יסוד במדעי החומר שחשוב להבדיל ביניהם"
     },
     {
-      "type": "text",
-      "content": "<div class=\"bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-3xl border border-blue-100 shadow-sm mb-8\"><p class=\"text-xl text-slate-700 text-center\">בחיי היום-יום אנחנו משתמשים במילים \"גוף\" ו\"חומר\" לפעמים בצורה מבולבלת. במדע, יש הבדל ברור וחשוב בין שני המושגים הללו!</p></div>"
+      "type": "introduction_block",
+      "title": "גוף מול חומר",
+      "icon": "rock",
+      "theme": "primary-blue",
+      "content": [
+        {
+          "type": "text",
+          "size": "lg",
+          "content": "בחיי היום-יום אנחנו משתמשים במילים \"גוף\" ו\"חומר\" לפעמים בצורה מבולבלת. במדע, יש הבדל ברור וחשוב בין שני המושגים הללו!"
+        }
+      ]
     },
     {
       "type": "grid_cards",

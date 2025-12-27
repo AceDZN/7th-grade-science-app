@@ -11,8 +11,35 @@
       "subtitle": "כיצד מודדים את המקום שגוף תופס במרחב?"
     },
     {
-      "type": "text",
-      "content": "<div class=\"bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-3xl border border-emerald-100 shadow-sm mb-8\"><h3 class=\"text-2xl font-black text-emerald-900 mb-4 text-center\"><img src=\"https://api.iconify.design/fluent-emoji/straight-ruler.svg\" alt=\"ruler\" class=\"w-8 h-8 inline\" /> מהו נפח?</h3><p class=\"text-lg text-slate-700 text-center mb-4\"><strong>נפח</strong> הוא המקום (המרחב) שגוף תופס. כל דבר שיש לו מסה גם תופס מקום - כלומר יש לו נפח.</p><div class=\"flex justify-center gap-4 mt-4\"><div class=\"bg-white px-4 py-2 rounded-xl border border-emerald-200 shadow-sm\"><span class=\"font-bold text-emerald-700\">סמ\"ק</span><span class=\"text-slate-500 text-sm\"> (סנטימטר מעוקב)</span></div><div class=\"bg-white px-4 py-2 rounded-xl border border-emerald-200 shadow-sm\"><span class=\"font-bold text-emerald-700\">מ\"ל</span><span class=\"text-slate-500 text-sm\"> (מיליליטר)</span></div><div class=\"bg-white px-4 py-2 rounded-xl border border-emerald-200 shadow-sm\"><span class=\"font-bold text-emerald-700\">ליטר</span></div></div><p class=\"text-center mt-4 text-sm text-slate-600\"><img src=\"https://api.iconify.design/fluent-emoji/light-bulb.svg\" alt=\"lightbulb\" class=\"w-4 h-4 inline\" /> <strong>1 סמ\"ק = 1 מ\"ל</strong> &nbsp;|&nbsp; <strong>1 ליטר = 1000 מ\"ל</strong></p></div>"
+      "type": "introduction_block",
+      "title": "מהו נפח?",
+      "icon": "straight-ruler",
+      "theme": "primary-emerald",
+      "content": [
+        {
+          "type": "text",
+          "size": "lg",
+          "content": "<strong>נפח</strong> הוא המקום (המרחב) שגוף תופס. כל דבר שיש לו מסה גם תופס מקום - כלומר יש לו נפח."
+        },
+        {
+          "type": "list_items",
+          "theme": "circular",
+          "content": [
+            {
+              "title": "סמ\"ק (סנטימטר מעוקב)",
+              "content": [{"type": "text", "size": "md", "content": "1 סמ\"ק = 1 מ\"ל"}]
+            },
+            {
+              "title": "מ\"ל (מיליליטר)",
+              "content": [{"type": "text", "size": "md", "content": "1,000 מ\"ל = 1 ליטר"}]
+            },
+            {
+              "title": "ליטר",
+              "content": [{"type": "text", "size": "md", "content": "יחידה בסיסית לנפח נוזלים"}]
+            }
+          ]
+        }
+      ]
     },
     {
       "type": "text",

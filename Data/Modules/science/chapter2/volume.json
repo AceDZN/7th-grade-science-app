@@ -11,8 +11,22 @@
       "subtitle": "כיצד מודדים את הנפח של גופים שונים?"
     },
     {
-      "type": "text",
-      "content": "<div class=\"bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-3xl border border-blue-100 shadow-sm mb-8\"><h3 class=\"text-2xl font-black text-blue-900 mb-4 text-center flex items-center justify-center gap-3\"><img src=\"https://api.iconify.design/fluent-emoji/package.svg\" alt=\"package\" class=\"w-10 h-10\" /> מהו נפח?</h3><p class=\"text-lg text-slate-700 text-center mb-4\"><strong>נפח</strong> הוא המקום שגוף תופס במרחב. כל גוף - בין אם הוא מוצק, נוזל או גז - תופס מקום ולכן יש לו נפח.</p><p class=\"text-center p-4 bg-white rounded-2xl border border-blue-200 shadow-sm\">כשאנחנו אומרים \"הכוס מכילה 250 מ\"ל מים\", אנחנו מתארים את <strong>הנפח</strong> של המים!</p></div>"
+      "type": "introduction_block",
+      "title": "מהו נפח?",
+      "icon": "package",
+      "theme": "primary-blue",
+      "content": [
+        {
+          "type": "text",
+          "size": "lg",
+          "content": "<strong>נפח</strong> הוא המקום שגוף תופס במרחב. כל גוף - בין אם הוא מוצק, נוזל או גז - תופס מקום ולכן יש לו נפח."
+        },
+        {
+          "type": "text",
+          "size": "md",
+          "content": "כשאנחנו אומרים \"הכוס מכילה 250 מ\"ל מים\", אנחנו מתארים את <strong>הנפח</strong> של המים!"
+        }
+      ]
     },
     {
       "type": "scientific_table",
