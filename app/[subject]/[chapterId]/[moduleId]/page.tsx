@@ -4,11 +4,12 @@ import { ChapterId, ModuleId, DynamicModuleData, Question } from "@/lib/types";
 // Client component for interactive module content
 import ModuleClient from "./module-client";
 import type { Metadata, ResolvingMetadata } from "next";
-import { SITE_NAME, CHAPTERS } from "@/lib/constants";
+import { SITE_NAME, SUBJECTS } from "@/lib/constants";
 
 interface PageProps {
   params: Promise<{
-    id: string;
+    subject: string;
+    chapterId: string;
     moduleId: string;
   }>;
 }
@@ -37,10 +38,12 @@ export async function generateMetadata(
   { params }: PageProps,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const { id, moduleId } = await params;
-  const dynamicData = await getModuleData(id, moduleId);
+  const { subject: subjectId, chapterId, moduleId } = await params;
+  const dynamicData = await getModuleData(chapterId, moduleId);
 
-  const chapter = CHAPTERS.find((c) => c.id === id);
+  const subject = SUBJECTS.find((s) => s.id === subjectId);
+  const chapter = subject?.chapters.find((c) => c.id === chapterId);
+  
   const chapterName = chapter?.title || "";
   const moduleName = dynamicData?.title || "";
 
@@ -58,7 +61,7 @@ export async function generateMetadata(
 
 export default async function Page({ params }: PageProps) {
   const resolvedParams = await params;
-  const chapterId = resolvedParams.id as ChapterId;
+  const chapterId = resolvedParams.chapterId as ChapterId;
   const moduleId = resolvedParams.moduleId as ModuleId;
 
   const dynamicData = await getModuleData(chapterId, moduleId);
@@ -91,13 +94,16 @@ export default async function Page({ params }: PageProps) {
 
 // Optimization: Pre-generate static paths for all chapters and modules
 export async function generateStaticParams() {
-  const { CHAPTERS } = await import("@/lib/constants");
+  const { SUBJECTS } = await import("@/lib/constants");
 
-  const paths = CHAPTERS.flatMap((chapter) =>
-    chapter.modules.map((module) => ({
-      id: chapter.id,
-      moduleId: module.id
-    }))
+  const paths = SUBJECTS.flatMap((subject) =>
+    subject.chapters.flatMap((chapter) =>
+      chapter.modules.map((module) => ({
+        subject: subject.id,
+        chapterId: chapter.id,
+        moduleId: module.id
+      }))
+    )
   );
 
   return paths;

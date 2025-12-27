@@ -1,20 +1,18 @@
 import React from "react";
-import { CHAPTERS, SITE_NAME } from "@/lib/constants";
+import { SUBJECTS, SITE_NAME } from "@/lib/constants";
 import { HeroSection } from "@/components/home/HeroSection";
-import { ChapterCard } from "@/components/home/ChapterCard";
+import { SubjectCard } from "@/components/home/SubjectCard";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `${SITE_NAME} - לומדים מדעים בדרך חווייתית`,
+  title: `${SITE_NAME} - לומדים הכל בדרך חווייתית`,
   description:
-    "פלטפורמה לימודית אינטראקטיבית למדעים. גלו את עולם החומר, המסה, הנפח והצפיפות דרך סימולציות, ניסויים ומבחנים חכמים.",
+    "פלטפורמה לימודית אינטראקטיבית. גלו עולמות ידע חדשים דרך סימולציות, ניסויים ומבחנים חכמים.",
   keywords: [
+    "למידה",
     "מדעים",
-    "פיזיקה",
-    "מודל החלקיקים",
-    "מסה",
-    "נפח",
-    "צפיפות",
+    "מתמטיקה",
+    "היסטוריה",
     "למידה מקוונת",
     "סימולציות"
   ]
@@ -30,8 +28,8 @@ export default function Home() {
         <HeroSection />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
-          {CHAPTERS.map((chapter) => (
-            <ChapterCard key={chapter.id} chapter={chapter} />
+          {SUBJECTS.map((subject) => (
+            <SubjectCard key={subject.id} subject={subject} />
           ))}
         </div>
       </div>

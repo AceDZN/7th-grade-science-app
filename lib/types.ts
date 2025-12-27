@@ -49,6 +49,14 @@ export interface Chapter {
   modules: ModuleData[];
 }
 
+export interface Subject {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  chapters: Chapter[];
+}
+
 export interface LearningState {
   currentChapter: ChapterId | null;
   currentModule: ModuleId;

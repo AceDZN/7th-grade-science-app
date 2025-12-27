@@ -2,17 +2,19 @@ import React from 'react';
 import { ChapterId, ModuleId, Question } from '@/lib/types';
 import SummaryClient from './SummaryClient';
 import type { Metadata } from 'next';
-import { SITE_NAME, CHAPTERS } from '@/lib/constants';
+import { SITE_NAME, SUBJECTS } from '@/lib/constants';
 
 interface PageProps {
   params: Promise<{
-    id: string;
+    subject: string;
+    chapterId: string;
   }>;
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { id } = await params;
-  const chapter = CHAPTERS.find((c) => c.id === id);
+  const { subject: subjectId, chapterId } = await params;
+  const subject = SUBJECTS.find((s) => s.id === subjectId);
+  const chapter = subject?.chapters.find((c) => c.id === chapterId);
   const chapterName = chapter?.title || "";
 
   return {
@@ -23,15 +25,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function Page({ params }: PageProps) {
   const resolvedParams = await params;
-  const chapterId = resolvedParams.id as ChapterId;
+  const chapterId = resolvedParams.chapterId as ChapterId;
 
   // Dynamically load questions and chapter data for the specific chapter on the server
   let questions: Question[] = [];
   let chapterTitle = "";
   
   try {
-    const { CHAPTERS } = await import("@/lib/constants/global");
-    const chapter = CHAPTERS.find((c) => c.id === chapterId);
+    const { SUBJECTS } = await import("@/lib/constants/global");
+    // We can't easily find the chapter without subjectId if we don't have it in resolvedParams or if we search all.
+    // But since we have SUBJECTS, we can find the chapter across all subjects or if we passed subjectId.
+    // resolvedParams has subject too.
+    const subjectId = resolvedParams.subject;
+    const subject = SUBJECTS.find(s => s.id === subjectId);
+    const chapter = subject?.chapters.find((c) => c.id === chapterId);
+    
     chapterTitle = chapter?.title || "";
 
     if (chapterId === ChapterId.Chapter1) {
@@ -57,8 +65,12 @@ export default async function Page({ params }: PageProps) {
 }
 
 export async function generateStaticParams() {
-  const { CHAPTERS } = await import('@/lib/constants');
-  return CHAPTERS.map((chapter) => ({
-    id: chapter.id,
-  }));
+  const { SUBJECTS } = await import('@/lib/constants');
+  
+  return SUBJECTS.flatMap((subject) =>
+    subject.chapters.map((chapter) => ({
+      subject: subject.id,
+      chapterId: chapter.id,
+    }))
+  );
 }
