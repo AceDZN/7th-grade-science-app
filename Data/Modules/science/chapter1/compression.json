@@ -31,19 +31,77 @@
           "title": "דחיסת גז",
           "icon": "dashing-away",
           "variant": "indigo-gradient",
-          "content": "<p class=\"text-sm opacity-90 mb-3\">גז נדחס בקלות רבה!</p><p class=\"text-sm bg-white/20 p-3 rounded-xl\">המרווחים בין חלקיקי הגז הם עצומים. כשמפעילים לחץ, פשוט מקרבים את החלקיקים זה לזה.</p>"
+          "content": [
+            {
+              "type": "p",
+              "content": "<b>גז נדחס בקלות רבה!</b>",
+              "size": "sm",
+              "className": "opacity-90 font-medium"
+            },
+            {
+              "type": "highlight_box",
+              "variant": "info",
+              "className": "mt-3",
+              "content": [
+                {
+                  "type": "p",
+                  "content": "המרווחים בין חלקיקי הגז הם עצומים. כשמפעילים לחץ, פשוט מקרבים את החלקיקים זה לזה.",
+                  "size": "sm"
+                }
+              ]
+            }
+          ]
         },
+
         {
           "title": "דחיסת נוזל",
           "icon": "droplet",
           "variant": "blue-gradient",
-          "content": "<p class=\"text-sm opacity-90 mb-3\">נוזל כמעט ואינו נדחס!</p><p class=\"text-sm bg-white/20 p-3 rounded-xl\">המרווחים בין חלקיקי הנוזל קטנים מאוד. כמעט אין \"מקום\" לקרב אותם עוד יותר.</p>"
+          "content": [
+            {
+              "type": "p",
+              "content": "<b>נוזל כמעט ואינו נדחס!</b>",
+              "size": "sm",
+              "className": "opacity-90 font-medium"
+            },
+            {
+              "type": "highlight_box",
+              "variant": "info",
+              "className": "mt-3",
+              "content": [
+                {
+                  "type": "p",
+                  "content": "המרווחים בין חלקיקי הנוזל קטנים מאוד. כמעט אין \"מקום\" לקרב אותם עוד יותר.",
+                  "size": "sm"
+                }
+              ]
+            }
+          ]
         },
         {
           "title": "דחיסת מוצק",
           "icon": "ice",
           "variant": "slate-gradient",
-          "content": "<p class=\"text-sm opacity-90 mb-3\">מוצק אינו נדחס (אלא בלחץ עצום)!</p><p class=\"text-sm bg-white/20 p-3 rounded-xl\">החלקיקים כבר צמודים זה לזה במבנה קבוע. אין מרווחים שאפשר להקטין.</p>"
+          "content": [
+            {
+              "type": "p",
+              "content": "<b>מוצק אינו נדחס (אלא בלחץ עצום)!</b>",
+              "size": "sm",
+              "className": "opacity-90 font-medium"
+            },
+            {
+              "type": "highlight_box",
+              "variant": "info",
+              "className": "mt-3",
+              "content": [
+                {
+                  "type": "p",
+                  "content": "החלקיקים כבר צמודים זה לזה במבנה קבוע. אין מרווחים שאפשר להקטין.",
+                  "size": "sm"
+                }
+              ]
+            }
+          ]
         }
       ]
     },

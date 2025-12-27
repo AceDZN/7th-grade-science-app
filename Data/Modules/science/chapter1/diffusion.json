@@ -40,19 +40,94 @@
           "title": "פעפוע בגז",
           "icon": "dashing-away",
           "variant": "pink-gradient",
-          "content": "<p class=\"text-sm opacity-90 mb-3\"><strong>מהיר מאוד!</strong></p><p class=\"text-xs bg-white/20 p-3 rounded-xl\">החלקיקים נעים במהירות גבוהה והמרווחים גדולים, לכן הערבוב מהיר.</p><p class=\"mt-3 text-sm\"><img src=\"https://api.iconify.design/fluent-emoji/cherry-blossom.svg\" alt=\"blossom\" class=\"w-4 h-4 inline\" /> <em>דוגמה: ריח בושם שמתפזר בחדר</em></p>"
+          "content": [
+            {
+              "type": "p",
+              "content": "<b>מהיר מאוד!</b>",
+              "size": "sm",
+              "className": "opacity-90 font-medium"
+            },
+            {
+              "type": "highlight_box",
+              "variant": "info",
+              "className": "mt-3",
+              "content": [
+                {
+                  "type": "p",
+                  "content": "החלקיקים נעים במהירות גבוהה והמרווחים גדולים, לכן הערבוב מהיר.",
+                  "size": "sm"
+                }
+              ]
+            },
+            {
+              "type": "p",
+              "size": "sm",
+              "className": "mt-3",
+              "content": "<img src=\"https://api.iconify.design/fluent-emoji/cherry-blossom.svg\" alt=\"blossom\" class=\"w-4 h-4 inline\" /> <em>דוגמה: ריח בושם שמתפזר בחדר</em>"
+            }
+          ]
         },
         {
           "title": "פעפוע בנוזל",
           "icon": "droplet",
           "variant": "blue-gradient",
-          "content": "<p class=\"text-sm opacity-90 mb-3\"><strong>איטי יותר</strong></p><p class=\"text-xs bg-white/20 p-3 rounded-xl\">החלקיקים קרובים יותר ונעים לאט יותר, לכן הערבוב לוקח זמן.</p><p class=\"mt-3 text-sm\"><img src=\"https://api.iconify.design/fluent-emoji/artist-palette.svg\" alt=\"palette\" class=\"w-4 h-4 inline\" /> <em>דוגמה: צבע מאכל שמתפזר במים</em></p>"
+          "content": [
+            {
+              "type": "p",
+              "content": "<b>איטי יותר</b>",
+              "size": "sm",
+              "className": "opacity-90 font-medium"
+            },
+            {
+              "type": "highlight_box",
+              "variant": "info",
+              "className": "mt-3",
+              "content": [
+                {
+                  "type": "p",
+                  "content": "החלקיקים קרובים יותר ונעים לאט יותר, לכן הערבוב לוקח זמן.",
+                  "size": "sm"
+                }
+              ]
+            },
+            {
+              "type": "p",
+              "size": "sm",
+              "className": "mt-3",
+              "content": "<img src=\"https://api.iconify.design/fluent-emoji/artist-palette.svg\" alt=\"palette\" class=\"w-4 h-4 inline\" /> <em>דוגמה: צבע מאכל שמתפזר במים</em>"
+            }
+          ]
         },
         {
           "title": "פעפוע במוצק",
           "icon": "ice",
           "variant": "slate-gradient",
-          "content": "<p class=\"text-sm opacity-90 mb-3\"><strong>איטי ביותר!</strong></p><p class=\"text-xs bg-white/20 p-3 rounded-xl\">החלקיקים רק רוטטים במקומם, כמעט לא מחליפים מקום.</p><p class=\"mt-3 text-sm\"><img src=\"https://api.iconify.design/fluent-emoji/gear.svg\" alt=\"gear\" class=\"w-4 h-4 inline\" /> <em>קורה רק בתהליכים תעשייתיים מיוחדים</em></p>"
+          "content": [
+            {
+              "type": "p",
+              "content": "<b>איטי ביותר!</b>",
+              "size": "sm",
+              "className": "opacity-90 font-medium"
+            },
+            {
+              "type": "highlight_box",
+              "variant": "info",
+              "className": "mt-3",
+              "content": [
+                {
+                  "type": "p",
+                  "content": "החלקיקים רק רוטטים במקומם, כמעט לא מחליפים מקום.",
+                  "size": "sm"
+                }
+              ]
+            },
+            {
+              "type": "p",
+              "size": "sm",
+              "className": "mt-3",
+              "content": "<img src=\"https://api.iconify.design/fluent-emoji/gear.svg\" alt=\"gear\" class=\"w-4 h-4 inline\" /> <em>דוגמה: קורה רק בתהליכים תעשייתיים מיוחדים</em>"
+            }
+          ]
         }
       ]
     },
